@@ -47,8 +47,8 @@ public class TurnTick : MonoBehaviour {
         spider = GameObject.Find("SpiderObject");
         turnBar_RT = elapsedTurnsBar.GetComponent<RectTransform>();
 
-        SPDR_start_pos = GameObject.Find("SpiderStart").transform.localPosition;
-        SPDR_end_pos = GameObject.Find("SpiderEnd").transform.localPosition;
+        SPDR_start_pos = GameObject.Find("SpiderStart").transform.position;
+        SPDR_end_pos = GameObject.Find("SpiderEnd").transform.position;
     }
 
 
@@ -62,12 +62,12 @@ public class TurnTick : MonoBehaviour {
 
 
             Vector2 next_pos = Vector2.Lerp(SPDR_start_pos, SPDR_end_pos, current_percent);
-            spider.transform.localPosition = Vector2.MoveTowards(spider.transform.localPosition, next_pos, speed);
+             spider.transform.localPosition = Vector2.MoveTowards(spider.transform.position, next_pos, speed);
             
 
             prev_percent = ((float)(Turns_Elapsed - 1) / (float)Turns_Total);
 
-            t += speed * Time.deltaTime;
+            t += speed * Time.deltaTime * 1.6f;
             float scaling = Mathf.Lerp(prev_percent, current_percent, t);
             turnBar_RT.sizeDelta = new Vector2(scaling * 100, 100);
             if (t >= 1.0f)
