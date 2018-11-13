@@ -282,10 +282,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CardController.cs" />
+    <Compile Include="Assets\Codes\Inven_Test.cs" />
+    <Compile Include="Assets\Codes\InventoryController.cs" />
+    <Compile Include="Assets\Codes\SpiderController.cs" />
+    <Compile Include="Assets\Codes\TurnBarVisuals.cs" />
     <Compile Include="Assets\Codes\TurnTick.cs" />
-    <Compile Include="Assets\Inven_Test.cs" />
-    <Compile Include="Assets\TurnTickTest.cs" />
+    <Compile Include="Assets\Codes\TurnTickTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
