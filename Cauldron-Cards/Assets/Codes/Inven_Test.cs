@@ -4,38 +4,38 @@ using UnityEngine;
 
 public class Inven_Test : MonoBehaviour {
 
-    InventoryController CardControls;
+    InventoryController Inven_controls;
 
     void Start()
     {
-        CardControls = GameObject.Find("CardController").GetComponent<InventoryController>();
+        Inven_controls = GameObject.Find("InventoryController").GetComponent<InventoryController>();
     }
 
     // Update is called once per frame
     void Update () {
 		if (Input.GetKeyDown(KeyCode.R))
         {
-            CardControls.addARedCard();
+            Inven_controls.addACard(InventoryController.colourNames.Red);
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            CardControls.addABlueCard();
+            Inven_controls.addACard(InventoryController.colourNames.Blue);
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            CardControls.addAYellowCard();
+            Inven_controls.addACard(InventoryController.colourNames.Yellow);
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            CardControls.addAnOrangeCard();
+            Inven_controls.addACard(InventoryController.colourNames.Orange);
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            CardControls.addAGreenCard();
+            Inven_controls.addACard(InventoryController.colourNames.Green);
         }
     }
 }

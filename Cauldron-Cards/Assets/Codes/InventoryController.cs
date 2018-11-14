@@ -5,8 +5,25 @@ using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour {
 
-    
-    int         redCard_num = 0;
+    public enum colourNames
+    {
+        Red,
+        Orange,
+        Yellow,
+        Green,
+        Blue
+    }
+
+    Dictionary<colourNames, int> Inven_Values = new Dictionary<colourNames, int>()
+    {
+        {colourNames.Red, 0},
+        {colourNames.Orange, 0},
+        {colourNames.Yellow, 0},
+        {colourNames.Green, 0},
+        {colourNames.Blue, 0}
+    }
+    ;
+
     Text        redCard_Text;
 
     int         blueCard_num = 0;
@@ -21,10 +38,13 @@ public class InventoryController : MonoBehaviour {
     int         greenCard_num = 0;
     Text        greenCard_Text;
 
+    TurnTick    turnTick_funcs; 
+
     //Othercards
 
     // Use this for initialization
     void Start () {
+
         redCard_Text = GameObject.Find("redCardText").GetComponent<Text>();
 
         blueCard_Text = GameObject.Find("blueCardText").GetComponent<Text>();
@@ -34,82 +54,73 @@ public class InventoryController : MonoBehaviour {
         orangeCard_Text = GameObject.Find("orangeCardText").GetComponent<Text>();
 
         greenCard_Text = GameObject.Find("greenCardText").GetComponent<Text>();
+
+        turnTick_funcs = GameObject.Find("Turn-Ticker").GetComponent<TurnTick>();
     }
     
+    public void addACard(colourNames colour)
+    {
+        Inven_Values[colour] += 1;
+        updateCardNumbers();
+        turnTick_funcs.onTurnTick();
+    }
+
     public void addARedCard()
     {
-        redCard_num++;
+        Inven_Values[colourNames.Red] += 1;
         updateCardNumbers();
+        turnTick_funcs.onTurnTick();
     }
 
     public void addABlueCard()
     {
         blueCard_num++;
         updateCardNumbers();
+        turnTick_funcs.onTurnTick();
     }
 
     public void addAYellowCard()
     {
         yellowCard_num++;
         updateCardNumbers();
+        turnTick_funcs.onTurnTick();
     }
 
     public void addAnOrangeCard()
     {
         orangeCard_num++;
         updateCardNumbers();
+        turnTick_funcs.onTurnTick();
     }
 
     public void addAGreenCard()
     {
         greenCard_num++;
         updateCardNumbers();
+        turnTick_funcs.onTurnTick();
     }
 
-    public void removeRedCards(int num)
+    public void removeCards(colourNames colour, int num)
     {
-        redCard_num -= num;
-        updateCardNumbers();
-    }
-    public void removeBlueCards(int num)
-    {
-        blueCard_num -= num;
-        updateCardNumbers();
-    }
-
-    public void removeYellowCards(int num)
-    {
-        yellowCard_num -= num;
-        updateCardNumbers();
-    }
-
-    public void removeOrangeCards(int num)
-    {
-        orangeCard_num -= num;
-        updateCardNumbers();
-    }
-
-    public void removeGreenCards(int num)
-    {
-        greenCard_num -= num;
+        Inven_Values[colour] -= num;
         updateCardNumbers();
     }
 
     void updateCardNumbers()
     {
-        if (redCard_num < 10)       { redCard_Text.text = "0" + redCard_num.ToString(); }
-        else                        { redCard_Text.text = redCard_num.ToString(); }
+        if (Inven_Values[colourNames.Red] < 10)         { redCard_Text.text = "0" + Inven_Values[colourNames.Red].ToString(); }
+        else                                            { redCard_Text.text = Inven_Values[colourNames.Red].ToString(); }
 
-        if (blueCard_num < 10)      { blueCard_Text.text = "0" + blueCard_num.ToString(); }
-        else                        { blueCard_Text.text = blueCard_num.ToString(); }
+        if (Inven_Values[colourNames.Blue] < 10)        { blueCard_Text.text = "0" + Inven_Values[colourNames.Blue].ToString(); }
+        else                                            { blueCard_Text.text = Inven_Values[colourNames.Blue].ToString(); }
 
-        if (yellowCard_num < 10)    { yellowCard_Text.text = "0" + yellowCard_num.ToString(); }
-        else                        { yellowCard_Text.text = yellowCard_num.ToString(); }
+        if (Inven_Values[colourNames.Yellow] < 10)      { yellowCard_Text.text = "0" + Inven_Values[colourNames.Yellow].ToString(); }
+        else                                            { yellowCard_Text.text = Inven_Values[colourNames.Yellow].ToString(); }
 
-        if (orangeCard_num < 10)    { orangeCard_Text.text = "0" + orangeCard_num.ToString(); }
-        else                        { orangeCard_Text.text = orangeCard_num.ToString(); }
+        if (Inven_Values[colourNames.Orange] < 10)      { orangeCard_Text.text = "0" + Inven_Values[colourNames.Orange].ToString(); }
+        else                                            { orangeCard_Text.text = Inven_Values[colourNames.Orange].ToString(); }
 
-        if (greenCard_num < 10)     { greenCard_Text.text = "0" + greenCard_num.ToString(); }
-        else                        { greenCard_Text.text = greenCard_num.ToString(); }
+        if (Inven_Values[colourNames.Green] < 10)       { greenCard_Text.text = "0" + Inven_Values[colourNames.Green].ToString(); }
+        else                                            { greenCard_Text.text = Inven_Values[colourNames.Green].ToString(); }
     }
 }
