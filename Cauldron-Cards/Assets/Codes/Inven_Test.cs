@@ -6,36 +6,35 @@ public class Inven_Test : MonoBehaviour {
 
     InventoryController Inven_controls;
 
+    //PotionController Potion_controls;
+    TutorialPotionsController Tut_Potion_controls;
+
     void Start()
     {
-        Inven_controls = GameObject.Find("InventoryController").GetComponent<InventoryController>();
+        //Potion_controls = GameObject.Find("PotionController").GetComponent<PotionController>();
+        Tut_Potion_controls = GameObject.Find("TutorialPotionController").GetComponent<TutorialPotionsController>();
     }
 
     // Update is called once per frame
     void Update () {
 		if (Input.GetKeyDown(KeyCode.R))
         {
-            Inven_controls.addACard(InventoryController.colourNames.Red);
+            Tut_Potion_controls.makePotion(InventoryController.colourNames.Red);
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            Inven_controls.addACard(InventoryController.colourNames.Blue);
+            Tut_Potion_controls.makePotion(InventoryController.colourNames.Blue);
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Inven_controls.addACard(InventoryController.colourNames.Yellow);
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Inven_controls.addACard(InventoryController.colourNames.Orange);
+            Tut_Potion_controls.makePotion(InventoryController.colourNames.Yellow);
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Inven_controls.addACard(InventoryController.colourNames.Green);
+            Tut_Potion_controls.makePotion(InventoryController.colourNames.Green);
         }
 
     }

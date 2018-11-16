@@ -284,12 +284,14 @@
   <ItemGroup>
     <Compile Include="Assets\Codes\Inven_Test.cs" />
     <Compile Include="Assets\Codes\InventoryController.cs" />
+    <Compile Include="Assets\Codes\PotionController.cs" />
+    <Compile Include="Assets\Codes\PotionInfo.cs" />
     <Compile Include="Assets\Codes\SpiderController.cs" />
     <Compile Include="Assets\Codes\TurnBarVisuals.cs" />
     <Compile Include="Assets\Codes\TurnTick.cs" />
     <Compile Include="Assets\Codes\TurnTickTest.cs" />
-    <Compile Include="Assets\PotionController.cs" />
-    <Compile Include="Assets\PotionInfo.cs" />
+    <Compile Include="Assets\PotionMaker.cs" />
+    <Compile Include="Assets\TutorialPotionsController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

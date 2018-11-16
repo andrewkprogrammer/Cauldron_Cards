@@ -15,6 +15,8 @@ public class PotionController : MonoBehaviour {
 
     InventoryController inventory;
 
+    //Add functionality for using Large Potions later!
+
     // Use this for initialization
     void Start () {
 
@@ -36,7 +38,7 @@ public class PotionController : MonoBehaviour {
     {
         if (!checkRequirements(colour))
         {
-            //Potion making failed!
+            Debug.Log(colour.ToString() + "Potion making failed!");
         }
         else
         {

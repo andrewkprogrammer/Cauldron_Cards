@@ -22,6 +22,10 @@ public class PotionInfo : MonoBehaviour {
     public bool inflictsPoison;
     public bool inflictsFreeze;
 
+    bool isMade;
+    bool displayThis;
+
+
     public int getRequiredValue (InventoryController.colourNames colour)
     {
         if (colour == InventoryController.colourNames.Red)
