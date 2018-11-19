@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TutorialPotionsController : MonoBehaviour {
 
-    GameObject redPotion;
-    GameObject yellowPotion;
-    GameObject greenPotion;
-    GameObject bluePotion;
+    public GameObject redPotion;
+    public GameObject yellowPotion;
+    public GameObject greenPotion;
+    public GameObject bluePotion;
 
     //GameObject character;
 
@@ -15,10 +15,6 @@ public class TutorialPotionsController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        redPotion       = GameObject.Find("RedPotion");
-        yellowPotion    = GameObject.Find("YellowPotion");
-        greenPotion     = GameObject.Find("GreenPotion");
-        bluePotion      = GameObject.Find("BluePotion");
 
         potion_lookup.Add(InventoryController.colourNames.Red, redPotion);
         potion_lookup.Add(InventoryController.colourNames.Yellow, yellowPotion);
@@ -30,7 +26,7 @@ public class TutorialPotionsController : MonoBehaviour {
 	
 	public void makePotion(InventoryController.colourNames colour)
     {
-        potion_lookup[colour].GetComponent<PotionMaker>().makePotion();
+        Instantiate(potion_lookup[colour]);
 
     }
 }

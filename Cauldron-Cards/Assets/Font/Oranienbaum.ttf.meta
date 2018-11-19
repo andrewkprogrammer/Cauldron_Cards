@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 888e03e28ee9a6b428ed0bcb1348b9bc
+timeCreated: 1542587982
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Oranienbaum
+  fontNames:
+  - Oranienbaum
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

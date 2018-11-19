@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpiderController : MonoBehaviour {
 
     Vector2 SPDR_start_pos;
     Vector2 SPDR_end_pos;
+
+    Text damageText;
     
 
     float current_percent;
@@ -21,6 +24,7 @@ public class SpiderController : MonoBehaviour {
     void Start () {
         SPDR_start_pos = GameObject.Find("SpiderStart").transform.position;
         SPDR_end_pos = GameObject.Find("SpiderEnd").transform.position;
+        damageText = GameObject.Find("damageText").GetComponent<Text>();
     }
 	
 	// Update is called once per frame
@@ -45,6 +49,7 @@ public class SpiderController : MonoBehaviour {
     public void applyDamage(int damage)
     {
         health -= damage;
+        damageText.text = damage.ToString();
         healthCheck();
     }
 
@@ -116,6 +121,7 @@ public class SpiderController : MonoBehaviour {
     {
         if (health <= 0)
         {
+            damageText.text = "DEAD";
             //Run victory functions
         }
     }

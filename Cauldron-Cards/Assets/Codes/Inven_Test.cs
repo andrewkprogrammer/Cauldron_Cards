@@ -9,10 +9,13 @@ public class Inven_Test : MonoBehaviour {
     //PotionController Potion_controls;
     TutorialPotionsController Tut_Potion_controls;
 
+    TurnTick turnTick;
+
     void Start()
     {
         //Potion_controls = GameObject.Find("PotionController").GetComponent<PotionController>();
         Tut_Potion_controls = GameObject.Find("TutorialPotionController").GetComponent<TutorialPotionsController>();
+        turnTick = GameObject.Find("Turn-Ticker").GetComponent<TurnTick>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,11 @@ public class Inven_Test : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.G))
         {
             Tut_Potion_controls.makePotion(InventoryController.colourNames.Green);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            turnTick.onTurnTick();
         }
 
     }
