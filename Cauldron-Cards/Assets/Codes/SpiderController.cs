@@ -8,6 +8,7 @@ public class SpiderController : MonoBehaviour {
     Vector2 SPDR_start_pos;
     Vector2 SPDR_end_pos;
 
+    GameObject damageObj;
     Text damageText;
     
 
@@ -24,7 +25,8 @@ public class SpiderController : MonoBehaviour {
     void Start () {
         SPDR_start_pos = GameObject.Find("SpiderStart").transform.position;
         SPDR_end_pos = GameObject.Find("SpiderEnd").transform.position;
-        damageText = GameObject.Find("damageText").GetComponent<Text>();
+        damageObj = GameObject.Find("damageText");
+        damageText = damageObj.GetComponent<Text>();
     }
 	
 	// Update is called once per frame
@@ -39,6 +41,8 @@ public class SpiderController : MonoBehaviour {
         //Moves spider towards the next node
         transform.position = Vector2.MoveTowards(transform.position, next_pos, speed*0.1f);
 
+
+       
     }
 
     public void updateTurnVisuals(float currentPercent)
@@ -49,7 +53,7 @@ public class SpiderController : MonoBehaviour {
     public void applyDamage(int damage)
     {
         health -= damage;
-        damageText.text = damage.ToString();
+        damageObj.GetComponent<HealthText>().runText(damage);
         healthCheck();
     }
 
