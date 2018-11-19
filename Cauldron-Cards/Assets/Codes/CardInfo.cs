@@ -2,39 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class CardInfo
 {
 
-    public enum CardColour : int
-    {
-        Red = 1,
-        Blue = 2,
-        Yellow = 3,
-        Green = 4,
-
-        White = 0 //white exists as a type of "null" value
-    }
-
+    public bool cardsNeedReset = false;
     const int AmountOfEachColour = 4;
     int numberOfClickedCards = 0;
 
+    int pairsMade = 0;
+
     List<CardBehaviour> clickedCards;
-    List<CardColour> ColourPool;
-    CardColour SelectedColour;
-    CardColour[] colours = { CardColour.Red, CardColour.Blue, CardColour.Yellow, CardColour.Green }; // a pool of colours to give to cards
+    List<Color> ColourPool;
+    Color SelectedColour;
+    Color[] colours = { Color.red, Color.blue, Color.yellow, Color.green }; // a pool of colours to give to cards
 
     // Use this for initialization
     public CardInfo()
     {
-        ColourPool = new List<CardColour>();
-        for (int i = 0; i < 4; i++)
-        {
-            for(int j = 0; j < AmountOfEachColour; j++)
-            {
-                ColourPool.Add(colours[i]);
-            }
-        }
+        Random.seed = (int)System.DateTime.Now.Ticks;
+
+        ColourPool = new List<Color>();
+        initializeColourPool();
 
         clickedCards = new List<CardBehaviour>();
 
@@ -46,8 +34,19 @@ public class CardInfo
 //_________________________________________________________________________________
 
 
+    private void initializeColourPool()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < AmountOfEachColour; j++)
+            {
+                ColourPool.Add(colours[i]);
+            }
+        }
+        cardsNeedReset = false;
+    }
     //  adds a card to the list of cards, typically this should only consist of two cards at most
-    public void AddCard(CardColour colour, CardBehaviour sender) 
+    public void AddCard(Color colour, CardBehaviour sender) 
     {
         numberOfClickedCards++;
         SelectedColour = colour;
@@ -56,18 +55,18 @@ public class CardInfo
 
     //  each card uses this function when it's made to decide what colour it should be
     //  without having too many of the same colour
-    public CardColour GiveColour()
+    public Color GiveColour()
     {
         if (ColourPool.Count > 0)
         {
             int randnum = Random.Range(0, ColourPool.Count);
-            CardColour returnColour = ColourPool[randnum];
+            Color returnColour = ColourPool[randnum];
             ColourPool.RemoveAt(randnum);
             return returnColour;
         }
         else
         {
-            return CardColour.White;
+            return Color.white;
         }
     }
 
@@ -97,6 +96,13 @@ public class CardInfo
         else if(clickedCards.Count == 2 && CardsAreSame())
         {
             clickedCards.Clear();
+            pairsMade++;
+        }
+
+        if(pairsMade >= 8)
+        {
+            initializeColourPool();
+            cardsNeedReset = true;
         }
     }
 }
