@@ -12,12 +12,13 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     static CardInfo cardInfo;
 
     bool Front_Showing = false;
-    //float timer = 0.0f;
+    float timer = 0.0f;
 
     public Color ThisColour;
-
-    GameObject thisObject;
+    
     Animator animator;
+    public bool FacingFront = true;
+    //GameObject umpire;
     
 
     void Start()
@@ -28,6 +29,10 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         }
         animator = GetComponent<Animator>();
         ThisColour = Color.white;
+
+        cardInfo.allCards.Add(this);
+
+        //umpire = GameObject.Find("CardUmpire");
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -49,13 +54,23 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
      {
         if(ThisColour == Color.white)
         {
-            ThisColour = cardInfo.GiveColour();
+            ThisColour = cardInfo.GiveColour(this);
             transform.gameObject.GetComponent<MeshRenderer>().material.color = ThisColour;
+            
         }
 
-        if(cardInfo.cardsNeedReset)
+        if (cardInfo.cardsNeedReset)
         {
-            ThisColour = Color.white;
+            timer += Time.deltaTime;
+            if (timer > 3.5f)
+            {
+                ThisColour = Color.white;
+                timer = 0.0f;
+            }
+            else if(timer > 1.7f)
+            {
+                unflip();
+            }
         }
 
 
@@ -68,4 +83,22 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         Front_Showing = false;
     }
     
- }
+    public void Facing(bool Front)
+    {
+        if(Front)
+            cardInfo.cardsFacingForward++;
+        else
+            cardInfo.cardsFacingForward--;
+    }
+
+    bool allFacingFront()
+    {
+        bool returnBool = true;
+        foreach(CardBehaviour card in cardInfo.allCards)
+        {
+            if (!card.Front_Showing)
+                returnBool = false;
+        }
+        return returnBool;
+    }
+}

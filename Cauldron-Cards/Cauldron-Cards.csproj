@@ -284,6 +284,8 @@
   <ItemGroup>
     <Compile Include="Assets\Codes\CardBehaviour.cs" />
     <Compile Include="Assets\Codes\CardInfo.cs" />
+    <Compile Include="Assets\FacingFront.cs" />
+    <Compile Include="Assets\OnIdleBack.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

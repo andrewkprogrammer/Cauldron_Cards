@@ -8,13 +8,13 @@ public class CardInfo
     public bool cardsNeedReset = false;
     const int AmountOfEachColour = 4;
     int numberOfClickedCards = 0;
-
+    public int cardsFacingForward = 16;
     int pairsMade = 0;
 
-    List<CardBehaviour> clickedCards;
-    List<Color> ColourPool;
-    Color SelectedColour;
+    public List<CardBehaviour> clickedCards;
+    public List<Color> ColourPool;
     Color[] colours = { Color.red, Color.blue, Color.yellow, Color.green }; // a pool of colours to give to cards
+    public List<CardBehaviour> allCards;
 
     // Use this for initialization
     public CardInfo()
@@ -25,7 +25,7 @@ public class CardInfo
         initializeColourPool();
 
         clickedCards = new List<CardBehaviour>();
-
+        allCards = new List<CardBehaviour>();
     }
 
 
@@ -36,6 +36,7 @@ public class CardInfo
 
     private void initializeColourPool()
     {
+        ColourPool.Clear();
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < AmountOfEachColour; j++)
@@ -43,25 +44,25 @@ public class CardInfo
                 ColourPool.Add(colours[i]);
             }
         }
-        cardsNeedReset = false;
+        
     }
     //  adds a card to the list of cards, typically this should only consist of two cards at most
     public void AddCard(Color colour, CardBehaviour sender) 
     {
         numberOfClickedCards++;
-        SelectedColour = colour;
         clickedCards.Add(sender);
     }
 
     //  each card uses this function when it's made to decide what colour it should be
     //  without having too many of the same colour
-    public Color GiveColour()
+    public Color GiveColour(CardBehaviour sender)
     {
-        if (ColourPool.Count > 0)
+        if (ColourPool.Count > 0 && !sender.FacingFront)
         {
             int randnum = Random.Range(0, ColourPool.Count);
             Color returnColour = ColourPool[randnum];
             ColourPool.RemoveAt(randnum);
+            cardsNeedReset = false;
             return returnColour;
         }
         else
@@ -103,6 +104,7 @@ public class CardInfo
         {
             initializeColourPool();
             cardsNeedReset = true;
+            pairsMade = 0;
         }
     }
 }
