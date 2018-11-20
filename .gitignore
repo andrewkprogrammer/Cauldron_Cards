@@ -2,3 +2,15 @@
 Cauldron-Cards/Library/
 
 Cauldron-Cards/Temp/
+
+Cauldron-Cards/\.vs/Cauldron-Cards/v15/\.suo
+
+Cauldron-Cards/\.vs/Cauldron-Cards/v15/Server/sqlite3/db\.lock
+
+Cauldron-Cards/\.vs/Cauldron-Cards/v15/Server/sqlite3/storage\.ide
+
+Cauldron-Cards/Assembly-CSharp\.csproj
+
+Cauldron-Cards/Cauldron-Cards\.csproj
+
+Cauldron-Cards/\.vs/Cauldron-Cards/DesignTimeBuild/\.dtbcache

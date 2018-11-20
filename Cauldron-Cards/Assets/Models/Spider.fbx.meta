@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: ef101fde118a8904884cba54b6c432e0
+timeCreated: 1542063004
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Head
+    100002: L_LowerForeleg
+    100004: L_UpperForeleg
+    100006: LB_LowerLeg
+    100008: LB_UpperLeg
+    100010: LC_Eye
+    100012: LC_LowerLeg
+    100014: LC_UpperLeg
+    100016: LF_LowerLeg
+    100018: LF_UpperLeg
+    100020: LI_Eye
+    100022: LO_Eye
+    100024: R_LowerForeleg
+    100026: R_UpperForeleg
+    100028: RB_LowerLeg
+    100030: RB_UpperLeg
+    100032: RC_Eye
+    100034: RC_LowerLeg
+    100036: RC_UpperLeg
+    100038: RF_LowerLeg
+    100040: RF_UpperLeg
+    100042: RI_Eye
+    100044: RO_Eye
+    100046: //RootNode
+    400000: Head
+    400002: L_LowerForeleg
+    400004: L_UpperForeleg
+    400006: LB_LowerLeg
+    400008: LB_UpperLeg
+    400010: LC_Eye
+    400012: LC_LowerLeg
+    400014: LC_UpperLeg
+    400016: LF_LowerLeg
+    400018: LF_UpperLeg
+    400020: LI_Eye
+    400022: LO_Eye
+    400024: R_LowerForeleg
+    400026: R_UpperForeleg
+    400028: RB_LowerLeg
+    400030: RB_UpperLeg
+    400032: RC_Eye
+    400034: RC_LowerLeg
+    400036: RC_UpperLeg
+    400038: RF_LowerLeg
+    400040: RF_UpperLeg
+    400042: RI_Eye
+    400044: RO_Eye
+    400046: //RootNode
+    2100000: lambert1
+    2300000: Head
+    2300002: L_LowerForeleg
+    2300004: L_UpperForeleg
+    2300006: LB_LowerLeg
+    2300008: LB_UpperLeg
+    2300010: LC_Eye
+    2300012: LC_LowerLeg
+    2300014: LC_UpperLeg
+    2300016: LF_LowerLeg
+    2300018: LF_UpperLeg
+    2300020: LI_Eye
+    2300022: LO_Eye
+    2300024: R_LowerForeleg
+    2300026: R_UpperForeleg
+    2300028: RB_LowerLeg
+    2300030: RB_UpperLeg
+    2300032: RC_Eye
+    2300034: RC_LowerLeg
+    2300036: RC_UpperLeg
+    2300038: RF_LowerLeg
+    2300040: RF_UpperLeg
+    2300042: RI_Eye
+    2300044: RO_Eye
+    2300046: //RootNode
+    3300000: Head
+    3300002: L_LowerForeleg
+    3300004: L_UpperForeleg
+    3300006: LB_LowerLeg
+    3300008: LB_UpperLeg
+    3300010: LC_Eye
+    3300012: LC_LowerLeg
+    3300014: LC_UpperLeg
+    3300016: LF_LowerLeg
+    3300018: LF_UpperLeg
+    3300020: LI_Eye
+    3300022: LO_Eye
+    3300024: R_LowerForeleg
+    3300026: R_UpperForeleg
+    3300028: RB_LowerLeg
+    3300030: RB_UpperLeg
+    3300032: RC_Eye
+    3300034: RC_LowerLeg
+    3300036: RC_UpperLeg
+    3300038: RF_LowerLeg
+    3300040: RF_UpperLeg
+    3300042: RI_Eye
+    3300044: RO_Eye
+    3300046: //RootNode
+    4300000: Abdomen
+    4300002: Head
+    4300004: LO_Eye
+    4300006: LC_Eye
+    4300008: LI_Eye
+    4300010: RO_Eye
+    4300012: RC_Eye
+    4300014: RI_Eye
+    4300016: R_UpperForeleg
+    4300018: R_LowerForeleg
+    4300020: L_UpperForeleg
+    4300022: L_LowerForeleg
+    4300024: RB_UpperLeg
+    4300026: RB_LowerLeg
+    4300028: RC_UpperLeg
+    4300030: RC_LowerLeg
+    4300032: RF_UpperLeg
+    4300034: RF_LowerLeg
+    4300036: LB_UpperLeg
+    4300038: LB_LowerLeg
+    4300040: LC_UpperLeg
+    4300042: LC_LowerLeg
+    4300044: LF_UpperLeg
+    4300046: LF_LowerLeg
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: dc546791e49d026469d9d489298757ed, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
