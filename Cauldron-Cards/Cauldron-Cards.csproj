@@ -285,7 +285,10 @@
     <Compile Include="Assets\Codes\CardBehaviour.cs" />
     <Compile Include="Assets\Codes\CardInfo.cs" />
     <Compile Include="Assets\Codes\FacingFront.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Codes\HealthText.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Codes\Inven_Test.cs" />
     <Compile Include="Assets\Codes\InventoryController.cs" />
     <Compile Include="Assets\Codes\OnIdleBack.cs" />
@@ -293,12 +296,20 @@
     <Compile Include="Assets\Codes\PotionInfo.cs" />
     <Compile Include="Assets\Codes\PotionMaker.cs" />
     <Compile Include="Assets\Codes\PotionSpin.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Codes\SceneLoaderBehaviour.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Codes\SpiderController.cs" />
     <Compile Include="Assets\Codes\TurnBarVisuals.cs" />
     <Compile Include="Assets\Codes\TurnTick.cs" />
     <Compile Include="Assets\Codes\TurnTickTest.cs" />
     <Compile Include="Assets\Codes\TutorialPotionsController.cs" />
+<<<<<<< Updated upstream
+=======
+    <Compile Include="Assets\HealthText.cs" />
+    <Compile Include="Assets\SceneLoaderBehaviour.cs" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
