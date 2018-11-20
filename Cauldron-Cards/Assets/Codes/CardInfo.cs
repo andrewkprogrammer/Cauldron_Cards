@@ -19,7 +19,7 @@ public class CardInfo
     // Use this for initialization
     public CardInfo()
     {
-        Random.seed = (int)System.DateTime.Now.Ticks;
+        //Random.seed = (int)System.DateTime.Now.Ticks;
 
         ColourPool = new List<Color>();
         initializeColourPool();
