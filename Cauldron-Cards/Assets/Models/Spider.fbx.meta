@@ -127,7 +127,12 @@ ModelImporter:
     4300044: LF_UpperLeg
     4300046: LF_LowerLeg
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: dc546791e49d026469d9d489298757ed, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

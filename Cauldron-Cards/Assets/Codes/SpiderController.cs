@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SpiderController : MonoBehaviour {
 
-    Vector2 SPDR_start_pos;
-    Vector2 SPDR_end_pos;
+    Vector3 SPDR_start_pos;
+    Vector3 SPDR_end_pos;
 
     GameObject damageObj;
     Text damageText;
@@ -33,13 +33,13 @@ public class SpiderController : MonoBehaviour {
 	void Update () {
         
         //Finds the location of the next node to reach
-        Vector2 next_pos = Vector2.Lerp(SPDR_start_pos, SPDR_end_pos, current_percent);
-        float distanceLeft = Vector2.Distance(transform.position, next_pos);
+        Vector3 next_pos = Vector3.Lerp(SPDR_start_pos, SPDR_end_pos, current_percent);
+        float distanceLeft = Vector3.Distance(transform.position, next_pos);
         float speed = publicspeed * distanceLeft;
 
 
         //Moves spider towards the next node
-        transform.position = Vector2.MoveTowards(transform.position, next_pos, speed*0.1f);
+        transform.position = Vector3.MoveTowards(transform.position, next_pos, speed*0.1f);
 
 
        

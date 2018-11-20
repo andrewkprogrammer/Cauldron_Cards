@@ -7,15 +7,15 @@ public class PotionMaker : MonoBehaviour {
     //Image
     GameObject spider;
 
-    Vector2 start_pos;
-    Vector2 spider_pos;
+    Vector3 start_pos;
+    Vector3 spider_pos;
 
     SpiderController spidercontrols;
 
     float deltaTimeMultiplier = 1.0f;
     float throw_t = 0.0f;
-    float gravity = -100.0f;
-    float yvel = 50.0f;
+    float gravity = -50.0f;
+    float yvel = 25.0f;
 
     float spinSpeed = -500.0f;
 
@@ -33,11 +33,11 @@ public class PotionMaker : MonoBehaviour {
 
         throw_t += Time.deltaTime * deltaTimeMultiplier;
 
-        Vector2 updated_pos;
+        Vector3 updated_pos;
 
         updated_pos.x = start_pos.x + (spider_pos.x - start_pos.x) * throw_t;
         updated_pos.y = start_pos.y + yvel * throw_t + (0.5f * gravity * throw_t * throw_t);
-        transform.position = updated_pos;
+        transform.position = new Vector3(updated_pos.x, updated_pos.y, start_pos.z);
 
         if (throw_t >= 1.0f)
         {

@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PotionSpin : MonoBehaviour {
 
-    public float spinSpeed;
+    float spinSpeed;
 
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+        spinSpeed = Random.Range(130.0f, 200.0f);
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         transform.Rotate(Vector3.forward * (spinSpeed * Time.deltaTime));
 

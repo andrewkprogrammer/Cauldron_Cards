@@ -294,6 +294,7 @@
     <Compile Include="Assets\Codes\TurnTickTest.cs" />
     <Compile Include="Assets\Codes\TutorialPotionsController.cs" />
     <Compile Include="Assets\HealthText.cs" />
+    <Compile Include="Assets\SceneLoaderBehaviour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
