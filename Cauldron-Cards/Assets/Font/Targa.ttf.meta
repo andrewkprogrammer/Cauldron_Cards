@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8a6abfd2cbf19ea43a0ea5da56c97aeb
+timeCreated: 1541998925
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 'Targa '
+  fontNames:
+  - 'Targa '
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
