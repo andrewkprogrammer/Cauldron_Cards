@@ -7,9 +7,6 @@ using UnityEngine.EventSystems;
 
 public class CardBehaviour : MonoBehaviour, IPointerClickHandler
  {
-    
-    
-    static CardInfo cardInfo;
 
     bool Front_Showing = false;
     float timer = 0.0f;
@@ -18,31 +15,27 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     
     Animator animator;
     public bool FacingFront = true;
-    //GameObject umpire;
-    
+
+    CardGridController CardController;
+
+    public bool CardNeedsReset = false;
 
     void Start()
     {
-        if (cardInfo == null)
-        {
-            cardInfo = new CardInfo();
-        }
+        CardController = (CardGridController)GameObject.Find("Card_Grid").GetComponent(typeof(CardGridController));
         animator = GetComponent<Animator>();
         ThisColour = Color.white;
+        CardController.SendCardInfo(this);
 
-        cardInfo.allCards.Add(this);
-
-        //umpire = GameObject.Find("CardUmpire");
     }
 
     public void OnPointerClick(PointerEventData eventData)
      {
-        if (!Front_Showing)
+        if (!Front_Showing && !CardNeedsReset)
         {
             animator.SetTrigger("Display");
             Front_Showing = true;
-            cardInfo.AddCard(ThisColour, this);
-            cardInfo.Update();
+            CardController.clickedCards.Add(this);
         }
      }
 
@@ -52,28 +45,16 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
      // Update is called once per frame
      void Update()
      {
-        if(ThisColour == Color.white)
+
+        if (ThisColour == Color.white)
         {
-            ThisColour = cardInfo.GiveColour(this);
+            ThisColour = CardController.GiveColour(this);
             transform.gameObject.GetComponent<MeshRenderer>().material.color = ThisColour;
             
         }
 
-        if (cardInfo.cardsNeedReset)
-        {
-            timer += Time.deltaTime;
-            if (timer > 3.5f)
-            {
-                ThisColour = Color.white;
-                timer = 0.0f;
-            }
-            else if(timer > 1.7f)
-            {
-                unflip();
-            }
-        }
-
-
+        if (CardNeedsReset)
+            reset();
         
      }
 
@@ -82,23 +63,21 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         animator.SetTrigger("Reset");
         Front_Showing = false;
     }
-    
-    public void Facing(bool Front)
+
+    private void reset()
     {
-        if(Front)
-            cardInfo.cardsFacingForward++;
-        else
-            cardInfo.cardsFacingForward--;
+        timer += Time.deltaTime;
+        if (timer > 3.5f)
+        {
+            ThisColour = Color.white;
+            timer = 0.0f;
+            CardNeedsReset = false;
+        }
+        else if (Front_Showing && timer > 1.7f)
+        {
+            unflip();
+        }
+
     }
 
-    bool allFacingFront()
-    {
-        bool returnBool = true;
-        foreach(CardBehaviour card in cardInfo.allCards)
-        {
-            if (!card.Front_Showing)
-                returnBool = false;
-        }
-        return returnBool;
-    }
 }
