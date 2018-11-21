@@ -1077,8 +1077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb0df00763a7d842b181d48ce9ceb20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsFacingForward: 16
   ColourPool: []
   clickedCards: []
+  allCards: []
 --- !u!1001 &1286033865
 Prefab:
   m_ObjectHideFlags: 0
