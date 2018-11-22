@@ -6,12 +6,15 @@ public class CardGridController : MonoBehaviour {
 
     //public bool cardsNeedReset = false;
     const int AmountOfEachColour = 4;
-    public int cardsFacingForward = 16;
+    int cardsFacingForward = 16;
     int pairsMade = 0;
 
+    [HideInInspector]
     public List<Color> ColourPool;
     Color[] colours = { Color.red, Color.blue, Color.yellow, Color.green }; // a pool of colours to give to cards
+    [HideInInspector]
     public List<CardBehaviour> clickedCards;
+    [HideInInspector]
     public List<CardBehaviour> allCards = new List<CardBehaviour>();
 
 

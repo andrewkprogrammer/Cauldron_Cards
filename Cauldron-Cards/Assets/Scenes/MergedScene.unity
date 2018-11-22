@@ -1901,6 +1901,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1239837095}
+  - component: {fileID: 1239837096}
   m_Layer: 0
   m_Name: Card_Grid
   m_TagString: Untagged
@@ -1917,7 +1918,7 @@ Transform:
   m_GameObject: {fileID: 1239837094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.6, y: 0.5413, z: 7.6}
-  m_LocalScale: {x: 2.0135818, y: 2.0135818, z: 0.8712729}
+  m_LocalScale: {x: 2, y: 2, z: 0.8712729}
   m_Children:
   - {fileID: 1374039928}
   - {fileID: 1141076777}
@@ -1938,6 +1939,20 @@ Transform:
   m_Father: {fileID: 1008525899}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239837096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239837094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb0df00763a7d842b181d48ce9ceb20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColourPool: []
+  clickedCards: []
+  allCards: []
 --- !u!1 &1302558577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,6 +2693,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1899376323076284, guid: e88587f6ff26be842b1438edfe1b8833, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e88587f6ff26be842b1438edfe1b8833, type: 2}
   m_IsPrefabParent: 0
@@ -2893,7 +2912,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 8cb9bc400ddfd4040b4ef47c15bf7e90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7
+      value: -7.25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8cb9bc400ddfd4040b4ef47c15bf7e90, type: 3}
       propertyPath: m_LocalPosition.y
