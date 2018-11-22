@@ -6,6 +6,7 @@ public class PotionMaker : MonoBehaviour {
 
     //Image
     GameObject spider;
+    GameObject throwStart;
 
     Vector3 start_pos;
     Vector3 spider_pos;
@@ -17,9 +18,10 @@ public class PotionMaker : MonoBehaviour {
     float gravity = -50.0f;
     float yvel = 25.0f;
 
-    private void Start()
+    void Start()
     {
-        start_pos = GameObject.Find("ThrowStart").transform.position;
+        throwStart = GameObject.FindGameObjectWithTag("ThrowStart");
+        start_pos = throwStart.transform.position;
         transform.position = start_pos;
         spider = GameObject.Find("SpiderObject");
         spider_pos = spider.transform.position;
