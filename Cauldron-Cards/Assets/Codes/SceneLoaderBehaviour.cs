@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoaderBehaviour : MonoBehaviour {
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
 
     public void loadScene (string nextScene) 
     {

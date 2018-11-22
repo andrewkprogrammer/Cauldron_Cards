@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3e86c74f8f869be4faca13fc940fe525
-timeCreated: 1542589961
+guid: 498343ae09064504e99a3a93b4137882
+timeCreated: 1542847898
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -11,9 +11,9 @@ ModelImporter:
     400000: Red_Potion
     400002: //RootNode
     400004: RedPotion_PVT
-    2100000: Bottle_Material
-    2100002: Liquid_Material
-    2100004: Cork_Material
+    2100000: Bottle_Material1
+    2100002: Liquid_Material1
+    2100004: Cork_Material1
     2300000: Red_Potion
     3300000: Red_Potion
     4300000: Red_Potion
@@ -22,17 +22,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bottle_Material
+      name: Bottle_Material1
     second: {fileID: 2100000, guid: c81964cc9a3f8b94a8cb5e49e39845f5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cork_Material
+      name: Cork_Material1
     second: {fileID: 2100000, guid: 793d10d4f2023d44b8bc8360c571ef18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Liquid_Material
+      name: Liquid_Material1
     second: {fileID: 2100000, guid: d5395f61363586947b94a98e0072003e, type: 2}
   materials:
     importMaterials: 1

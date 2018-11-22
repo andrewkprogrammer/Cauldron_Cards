@@ -16,8 +16,7 @@ public class TurnTick : MonoBehaviour {
     float current_percent;
     float prev_percent;
 
-    Text eventTestText;
-
+    SceneLoaderBehaviour sceneLoaderBehaviour;
 
     public enum EventType
     {
@@ -37,10 +36,10 @@ public class TurnTick : MonoBehaviour {
             m_eventList[i] = EventType.Null;
         }
         m_eventList[Turns_Total] = EventType.GameOver;  //Example
-        m_eventList[3] = EventType.GoodEvent;
-        m_eventList[5] = EventType.BadEvent;
+        //m_eventList[3] = EventType.GoodEvent;
+        //m_eventList[5] = EventType.BadEvent;
         spider_Script = GameObject.Find("SpiderObject").GetComponent<SpiderController>();
-        eventTestText = GameObject.Find("Event Tests").GetComponent<Text>();
+        sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
     }
 
 
@@ -65,28 +64,18 @@ public class TurnTick : MonoBehaviour {
         {
             runGameOver();
         }
-        else if (eventType == EventType.GoodEvent)
-        {
-            runGoodEvent();
-        }
-        else if (eventType == EventType.BadEvent)
-        {
-            runBadEvent();
-        }
+        //else if (eventType == EventType.GoodEvent)
+        //{
+        //    runGoodEvent();
+        //}
+        //else if (eventType == EventType.BadEvent)
+        //{
+        //    runBadEvent();
+        //}
     }
 
     void runGameOver()
     {
-        SceneManager.LoadScene("GameOver");
-    }
-
-    void runGoodEvent()
-    {
-        eventTestText.text = "Good Event";
-    }
-
-    void runBadEvent()
-    {
-        eventTestText.text = "Bad Event";
+        sceneLoaderBehaviour.loadScene("GameOver");
     }
 }

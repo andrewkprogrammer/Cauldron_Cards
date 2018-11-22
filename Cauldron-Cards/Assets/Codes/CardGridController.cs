@@ -17,6 +17,9 @@ public class CardGridController : MonoBehaviour {
     [HideInInspector]
     public List<CardBehaviour> allCards = new List<CardBehaviour>();
 
+    TutorialPotionsController tutorialPotionsController;
+    TurnTick turnTick;
+
 
     // Use this for initialization
     void Start ()
@@ -25,7 +28,8 @@ public class CardGridController : MonoBehaviour {
         initializeColourPool();
 
         clickedCards = new List<CardBehaviour>();
-
+        tutorialPotionsController = GameObject.Find("TutorialPotionController").GetComponent<TutorialPotionsController>();
+        turnTick = GameObject.Find("Turn-Ticker").GetComponent<TurnTick>();
     }
 
     private void initializeColourPool()
@@ -50,9 +54,18 @@ public class CardGridController : MonoBehaviour {
     private bool CardsAreSame()
     {
         if (clickedCards[0].ThisColour != clickedCards[1].ThisColour)
+        {
+            turnTick.onTurnTick();
             return false;
+        }
+
         else
+        {
+            tutorialPotionsController.makePotion(clickedCards[0].ThisColour);
+            clickedCards.Clear();
+            pairsMade++;
             return true;
+        }
     }
 
     public Color GiveColour(CardBehaviour sender)
@@ -80,11 +93,6 @@ public class CardGridController : MonoBehaviour {
                 card.unflip();
             }
             clickedCards.Clear();
-        }
-        else if (clickedCards.Count == 2)
-        {
-            clickedCards.Clear();
-            pairsMade++;
         }
 
         if(pairsMade >= 8)
