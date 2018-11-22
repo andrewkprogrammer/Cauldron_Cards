@@ -29,4 +29,26 @@ public class TutorialPotionsController : MonoBehaviour {
         Instantiate(potion_lookup[colour]);
 
     }
+
+    public void makePotion(Color colour)
+    {
+        if (colour == Color.red)
+        {
+            Instantiate(redPotion);
+        }
+        else if (colour == Color.yellow)
+        {
+            Instantiate(yellowPotion);
+        }
+        else if (colour == Color.green)
+        {
+            Instantiate(greenPotion);
+        }
+        else if (colour == Color.blue)
+        {
+            Instantiate(bluePotion);
+        }
+
+
+    }
 }

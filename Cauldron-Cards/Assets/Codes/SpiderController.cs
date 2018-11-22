@@ -10,6 +10,8 @@ public class SpiderController : MonoBehaviour {
 
     GameObject damageObj;
     Text damageText;
+
+    SceneLoaderBehaviour sceneLoaderBehaviour;
     
 
     float current_percent;
@@ -27,6 +29,7 @@ public class SpiderController : MonoBehaviour {
         SPDR_end_pos = GameObject.Find("SpiderEnd").transform.position;
         damageObj = GameObject.Find("damageText");
         damageText = damageObj.GetComponent<Text>();
+        sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
     }
 	
 	// Update is called once per frame
@@ -125,8 +128,7 @@ public class SpiderController : MonoBehaviour {
     {
         if (health <= 0)
         {
-            damageText.text = "DEAD";
-            //Run victory functions
+            sceneLoaderBehaviour.loadScene("Win Screen");
         }
     }
 

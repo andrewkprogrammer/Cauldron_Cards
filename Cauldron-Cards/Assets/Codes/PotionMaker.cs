@@ -17,9 +17,6 @@ public class PotionMaker : MonoBehaviour {
     float gravity = -50.0f;
     float yvel = 25.0f;
 
-    float spinSpeed = -500.0f;
-
-
     private void Start()
     {
         start_pos = GameObject.Find("ThrowStart").transform.position;
@@ -43,7 +40,7 @@ public class PotionMaker : MonoBehaviour {
         {
             int damage = Random.Range(1, 5);
             spidercontrols.applyDamage(damage);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             //Play smash animations and sounds
         }
 
