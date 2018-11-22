@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   publicspeed: 0.38
-  health: 6
+  health: 15
 --- !u!1 &379836801
 GameObject:
   m_ObjectHideFlags: 0
