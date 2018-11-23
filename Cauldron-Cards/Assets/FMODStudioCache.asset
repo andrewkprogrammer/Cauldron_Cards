@@ -15,12 +15,35 @@ MonoBehaviour:
   - {fileID: 114109306305033588}
   - {fileID: 114378003541999882}
   EditorEvents:
-  - {fileID: 114161266336060072}
   - {fileID: 114271397175632134}
+  - {fileID: 114088178089058442}
   MasterBankRef: {fileID: 114378003541999882}
   StringsBankRef: {fileID: 114109306305033588}
-  stringsBankWriteTime: 636785833753732873
+  stringsBankWriteTime: 636785863691682873
   cacheVersion: 2
+--- !u!114 &114088178089058442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Gameplay
+  guid: 9f4fbe68d578e846adff5e0398ac1010
+  Banks:
+  - {fileID: 114378003541999882}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114522066456580918}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 29313
 --- !u!114 &114109306305033588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD Audio\Cauldron Cards FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636785833753732873
+  lastModified: 636785863691682873
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -112,13 +135,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\s182378\Documents\Code Repository\Cauldron_Cards\Cauldron-Cards\Assets\FMOD
     Audio\Cauldron Cards FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 636785833753672873
+  lastModified: 636785863691632873
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 3483872
   Exists: 1
+--- !u!114 &114522066456580918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 1
+  Max: 4
+  Default: 1
 --- !u!114 &114533604791607560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 1
+  Max: 4
+  Default: 1
+--- !u!114 &114850754240342872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

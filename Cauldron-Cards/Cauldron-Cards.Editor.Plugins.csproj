@@ -315,7 +315,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Asset\{646f9346-ea4d-43f3-8c88-5f360d4cc8ad}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{085d6989-2277-40b5-957b-ff2cde3a6797}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{0c5e5b3f-ddf5-440d-a16e-4471aed68b24}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{120978a0-bbf6-488f-b618-45990edf8223}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{1322b80e-6ca6-4f76-b273-6d90326d2549}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{19e5469b-2546-4d99-b6eb-360e819c7d04}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{2b71b65e-40aa-4187-90e6-cb70668732a7}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{34d3a026-2727-4480-a6e7-cb72e5ccf01c}.xml" />
@@ -323,6 +326,9 @@
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{398ac6a1-c674-496e-bc76-6023dfd7c8d7}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{3aeaf37e-92ed-475f-ac6f-ef7b46373556}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{3f9348a0-5844-4978-8ac7-fb2a5f5d63e6}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{4b8359a7-9650-45bb-90ad-bf87c442af92}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{4f129b2d-e838-4539-a0b6-1a6119a83444}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{53410ba5-840e-44ed-a322-e1ba37314e4e}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{54cd6ae8-b605-43b8-9c4b-bc134e299ef4}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{5eadb39f-3a4d-472c-8613-c9df56fc91ee}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{700aa9ce-865d-4d1d-8708-1e5628a9bb18}.xml" />
@@ -334,10 +340,14 @@
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{9d8bfa6c-91cc-450f-8624-356a47cc2d13}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{9f87b8c5-7202-4005-965e-b757b79d66b8}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{a11643b4-4ced-4687-9658-70c7cb5e7148}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{a1f26d52-24cd-4e29-919c-2b56dfbcc338}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{bb1de852-9f00-46e5-947b-a56fdb1b98d0}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{bc371e69-7e3f-4a47-9849-2df0021c71c6}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{c9eec521-2c9a-496d-bf06-3208a2bec7ba}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{d0962e73-a025-43d1-9088-1395a63912cb}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{d2b2b2ee-a357-4c7a-96d6-afc797875a21}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{e5ec7d88-6468-4eef-ab78-4766541e77a1}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{e73069dd-a679-43f2-9271-f2cd93e54d9c}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{f0f8015f-a0c9-44d7-92f7-9fdc7468c386}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\AudioFile\{f2ba2679-d6a4-48ed-af20-d6e5f1dc2256}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Bank\{af1294c7-2942-4612-b22c-95df844d70ed}.xml" />
