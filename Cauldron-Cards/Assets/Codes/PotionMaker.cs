@@ -8,6 +8,8 @@ public class PotionMaker : MonoBehaviour {
     GameObject spider;
     GameObject throwStart;
 
+    public GameObject animatedCloud;
+
     Vector3 start_pos;
     Vector3 spider_pos;
 
@@ -42,8 +44,10 @@ public class PotionMaker : MonoBehaviour {
         {
             int damage = Random.Range(1, 5);
             spidercontrols.applyDamage(damage);
+            Instantiate(animatedCloud);
+            //Play smash sounds
             Destroy(gameObject);
-            //Play smash animations and sounds
+
         }
 
     }

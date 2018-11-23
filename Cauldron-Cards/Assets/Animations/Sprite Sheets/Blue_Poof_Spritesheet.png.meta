@@ -1,24 +1,24 @@
 fileFormatVersion: 2
-guid: 7cf6cbea5dd1d084daad6cad7f88bf53
-timeCreated: 1542926174
+guid: 2fc5b00c93a2db742b5ee196135a582c
+timeCreated: 1542927438
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Green_Poof_Spritesheet_0
-    21300002: Green_Poof_Spritesheet_1
-    21300004: Green_Poof_Spritesheet_2
-    21300006: Green_Poof_Spritesheet_3
-    21300008: Green_Poof_Spritesheet_4
-    21300010: Green_Poof_Spritesheet_5
-    21300012: Green_Poof_Spritesheet_6
-    21300014: Green_Poof_Spritesheet_7
-    21300016: Green_Poof_Spritesheet_8
-    21300018: Green_Poof_Spritesheet_9
-    21300020: Green_Poof_Spritesheet_10
-    21300022: Green_Poof_Spritesheet_11
-    21300024: Green_Poof_Spritesheet_12
-    21300026: Green_Poof_Spritesheet_13
-    21300028: Green_Poof_Spritesheet_14
+    21300000: Blue_Poof_Spritesheet_0
+    21300002: Blue_Poof_Spritesheet_1
+    21300004: Blue_Poof_Spritesheet_2
+    21300006: Blue_Poof_Spritesheet_3
+    21300008: Blue_Poof_Spritesheet_4
+    21300010: Blue_Poof_Spritesheet_5
+    21300012: Blue_Poof_Spritesheet_6
+    21300014: Blue_Poof_Spritesheet_7
+    21300016: Blue_Poof_Spritesheet_8
+    21300018: Blue_Poof_Spritesheet_9
+    21300020: Blue_Poof_Spritesheet_10
+    21300022: Blue_Poof_Spritesheet_11
+    21300024: Blue_Poof_Spritesheet_12
+    21300026: Blue_Poof_Spritesheet_13
+    21300028: Blue_Poof_Spritesheet_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -105,97 +105,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_0
+      name: Blue_Poof_Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 195
-        width: 79
-        height: 77
+        x: 2
+        y: 190
+        width: 78
+        height: 79
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_1
+      name: Blue_Poof_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 105
-        y: 189
-        width: 84
+        x: 99
+        y: 188
+        width: 102
         height: 99
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_2
+      name: Blue_Poof_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 203
+        x: 208
+        y: 199
+        width: 112
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 335
         y: 193
-        width: 117
-        height: 107
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 189
-        width: 122
-        height: 111
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 474
-        y: 195
-        width: 121
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 619
-        y: 196
-        width: 140
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 198
         width: 131
-        height: 134
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,54 +161,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_7
+      name: Blue_Poof_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 955
-        y: 191
-        width: 141
-        height: 141
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 42
-        width: 136
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 40
-        width: 143
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Green_Poof_Spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 41
-        width: 130
+        x: 482
+        y: 193
+        width: 122
         height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -259,13 +175,97 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_11
+      name: Blue_Poof_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 492
+        x: 621
+        y: 200
+        width: 146
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 205
+        width: 130
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 205
+        width: 123
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 138
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 33
+        width: 145
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 34
+        width: 129
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Blue_Poof_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 496
         y: 40
-        width: 127
-        height: 124
+        width: 135
+        height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,13 +273,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_12
+      name: Blue_Poof_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 645
-        y: 30
-        width: 122
-        height: 141
+        x: 648
+        y: 34
+        width: 114
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,13 +287,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_13
+      name: Blue_Poof_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 787
-        y: 29
-        width: 143
-        height: 147
+        x: 777
+        y: 37
+        width: 152
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,13 +301,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Green_Poof_Spritesheet_14
+      name: Blue_Poof_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 948
-        y: 25
-        width: 144
-        height: 149
+        x: 939
+        y: 21
+        width: 148
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

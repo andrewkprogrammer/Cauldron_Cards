@@ -203,6 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be504e0f064e19f4bad3d3c20341b3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatedCloud: {fileID: 1690083482018212, guid: 87fcc43c73e1ca94fa735b49f540d25d,
+    type: 2}
 --- !u!114 &114642074046650096
 MonoBehaviour:
   m_ObjectHideFlags: 1

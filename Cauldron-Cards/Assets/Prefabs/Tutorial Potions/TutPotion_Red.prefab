@@ -214,6 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be504e0f064e19f4bad3d3c20341b3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatedCloud: {fileID: 1004282005388216, guid: 7e02c16bdb036f54a897822699248cb9,
+    type: 2}
 --- !u!222 &222921675764534862
 CanvasRenderer:
   m_ObjectHideFlags: 1
