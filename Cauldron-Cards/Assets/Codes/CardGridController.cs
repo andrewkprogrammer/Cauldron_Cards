@@ -8,6 +8,7 @@ public class CardGridController : MonoBehaviour {
     const int AmountOfEachColour = 4;
     int cardsFacingForward = 16;
     int pairsMade = 0;
+    float timer;
 
     [HideInInspector]
     public List<Color> ColourPool;
@@ -17,19 +18,42 @@ public class CardGridController : MonoBehaviour {
     [HideInInspector]
     public List<CardBehaviour> allCards = new List<CardBehaviour>();
 
+    Material[] Textures;
+    List<Material> TexturePool;
+
     TutorialPotionsController tutorialPotionsController;
     TurnTick turnTick;
-
 
     // Use this for initialization
     void Start ()
     {
         ColourPool = new List<Color>();
+        TexturePool = new List<Material>();
+        Material[] tempTextures = { Resources.Load<Material>("Herb_Mat"), Resources.Load<Material>("Mushroom_Mat"), Resources.Load<Material>("Ore_Mat"), Resources.Load<Material>("Root_Mat") };
+        tempTextures[0].name = "Herb";
+        tempTextures[1].name = "Mushroom";
+        tempTextures[2].name = "Ore";
+        tempTextures[3].name = "Root";
+        Textures = tempTextures;
         initializeColourPool();
 
         clickedCards = new List<CardBehaviour>();
         tutorialPotionsController = GameObject.Find("TutorialPotionController").GetComponent<TutorialPotionsController>();
         turnTick = GameObject.Find("Turn-Ticker").GetComponent<TurnTick>();
+
+        StartCoroutine(setStartCardMaterial());
+    }
+
+    IEnumerator setStartCardMaterial()
+    {
+        yield return new WaitForEndOfFrame();
+        foreach(var c in allCards)
+        {
+            Material randMat = GiveMat();
+            c.thisMaterial = randMat;
+            c.thisMaterial.name = randMat.name;
+        }
+
     }
 
     private void initializeColourPool()
@@ -40,6 +64,14 @@ public class CardGridController : MonoBehaviour {
             for (int j = 0; j < AmountOfEachColour; j++)
             {
                 ColourPool.Add(colours[i]);
+            }
+        }
+        
+        for( int i = 0; i < 4; i++)
+        {
+            for(int j = 0; j < AmountOfEachColour; j++)
+            {
+                TexturePool.Add(Textures[i]);
             }
         }
 
@@ -53,34 +85,26 @@ public class CardGridController : MonoBehaviour {
     //  checks the two selected cards and returns true if they are the same colour
     private bool CardsAreSame()
     {
-        if (clickedCards[0].ThisColour != clickedCards[1].ThisColour)
+        if (clickedCards[0].thisMaterial.name != clickedCards[1].thisMaterial.name)
         {
             turnTick.onTurnTick();
             return false;
         }
-
         else
         {
-            tutorialPotionsController.makePotion(clickedCards[0].ThisColour);
+            tutorialPotionsController.makePotion(Color.red);
             clickedCards.Clear();
             pairsMade++;
             return true;
         }
     }
 
-    public Color GiveColour(CardBehaviour sender)
+    public Material GiveMat()
     {
-        if (ColourPool.Count > 0 && !sender.FacingFront)
-        {
-            int randnum = Random.Range(0, ColourPool.Count);
-            Color returnColour = ColourPool[randnum];
-            ColourPool.RemoveAt(randnum);
-            return returnColour;
-        }
-        else
-        {
-            return Color.white;
-        }
+        int randnum = Random.Range(0, TexturePool.Count);
+        Material returnTexture = TexturePool[randnum];
+        TexturePool.RemoveAt(randnum);
+        return returnTexture;
     }
 
     // Update is called once per frame
@@ -97,12 +121,27 @@ public class CardGridController : MonoBehaviour {
 
         if(pairsMade >= 8)
         {
+            if(TexturePool.Count != 0)
             initializeColourPool();
-            foreach(CardBehaviour card in allCards)
+
+            timer += Time.deltaTime;
+
+            if (timer > 3.5f)
             {
-                card.CardNeedsReset = true;
+                foreach(CardBehaviour card in allCards)
+                    card.thisMaterial = GiveMat();
+                pairsMade = 0;
+                timer = 0.0f;
             }
-            pairsMade = 0;
+            else if (timer > 1.7f)
+            {
+                foreach (CardBehaviour card in allCards)
+                {
+                    if(!card.Front_Showing)
+                    card.unflip();
+                }
+            }
+
         }
 	}
 }
