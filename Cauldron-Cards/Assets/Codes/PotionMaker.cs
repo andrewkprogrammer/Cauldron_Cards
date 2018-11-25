@@ -24,6 +24,7 @@ public class PotionMaker : MonoBehaviour {
         spider = GameObject.Find("SpiderObject");
         spider_pos = spider.transform.position;
         spidercontrols = spider.GetComponent<SpiderController>();
+        
     }
     void Update()
     {

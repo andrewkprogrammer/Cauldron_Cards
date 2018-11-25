@@ -24,6 +24,8 @@ public class CardGridController : MonoBehaviour {
     TutorialPotionsController tutorialPotionsController;
     TurnTick turnTick;
 
+    Animator CatAnimator;
+
     // Use this for initialization
     void Start ()
     {
@@ -36,6 +38,8 @@ public class CardGridController : MonoBehaviour {
         tempTextures[3].name = "Root";
         Textures = tempTextures;
         initializeColourPool();
+
+        CatAnimator = GameObject.Find("Cat_Model").GetComponent<Animator>();
 
         clickedCards = new List<CardBehaviour>();
         tutorialPotionsController = GameObject.Find("TutorialPotionController").GetComponent<TutorialPotionsController>();
@@ -92,11 +96,23 @@ public class CardGridController : MonoBehaviour {
         }
         else
         {
-            tutorialPotionsController.makePotion(Color.red);
+            throwPotion();
             clickedCards.Clear();
             pairsMade++;
             return true;
         }
+    }
+
+    void throwPotion()
+    {
+        if(clickedCards[0].thisMaterial.name == "Root")
+            tutorialPotionsController.makePotion(Color.red);
+        else if(clickedCards[0].thisMaterial.name == "Ore")
+            tutorialPotionsController.makePotion(Color.yellow);
+        else if (clickedCards[0].thisMaterial.name == "Mushroom")
+            tutorialPotionsController.makePotion(Color.blue);
+        else if (clickedCards[0].thisMaterial.name == "Herb")
+            tutorialPotionsController.makePotion(Color.green);
     }
 
     public Material GiveMat()
