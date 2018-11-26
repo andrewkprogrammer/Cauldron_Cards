@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4365118549515794}
   - component: {fileID: 222340005057870282}
   - component: {fileID: 114502423198057902}
+  - component: {fileID: 114481430414828514}
+  - component: {fileID: 114986589810406914}
   m_Layer: 0
   m_Name: TutPotion_Blue
   m_TagString: Untagged
@@ -192,6 +194,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114481430414828514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064611134444056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5446bf339872e943b7df17e7b0a954c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114502423198057902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatedCloud: {fileID: 1690083482018212, guid: 87fcc43c73e1ca94fa735b49f540d25d,
     type: 2}
+  colour_name: blue
 --- !u!114 &114642074046650096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,6 +230,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202007e7c2225fb4f9be00170b4eb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114986589810406914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064611134444056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Potion Smash
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!222 &222340005057870282
 CanvasRenderer:
   m_ObjectHideFlags: 1

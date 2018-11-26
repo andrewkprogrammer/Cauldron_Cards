@@ -54,6 +54,8 @@ GameObject:
   - component: {fileID: 4781638909584774}
   - component: {fileID: 95780520053454196}
   - component: {fileID: 114456398114063980}
+  - component: {fileID: 114474552459504708}
+  - component: {fileID: 114840508063942292}
   m_Layer: 0
   m_Name: TutPotion_Green
   m_TagString: Untagged
@@ -175,6 +177,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatedCloud: {fileID: 1761866766783314, guid: 7de693fdd921ae243a774aaeae6a8d59,
     type: 2}
+  colour_name: green
+--- !u!114 &114474552459504708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413603519713322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5446bf339872e943b7df17e7b0a954c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114744879036534596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,3 +200,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202007e7c2225fb4f9be00170b4eb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114840508063942292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413603519713322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Potion Smash
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

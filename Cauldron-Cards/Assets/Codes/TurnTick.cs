@@ -18,6 +18,8 @@ public class TurnTick : MonoBehaviour {
 
     SceneLoaderBehaviour sceneLoaderBehaviour;
 
+    SoundTrigger emitter;
+
     public enum EventType
     {
         GoodEvent,
@@ -40,6 +42,7 @@ public class TurnTick : MonoBehaviour {
         //m_eventList[5] = EventType.BadEvent;
         spider_Script = GameObject.Find("SpiderObject").GetComponent<SpiderController>();
         sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
+        emitter = GetComponent<SoundTrigger>();
     }
 
 
@@ -51,6 +54,7 @@ public class TurnTick : MonoBehaviour {
         prev_percent = ((float)(Turns_Elapsed - 1) / (float)Turns_Total);
         spider_Script.updateTurnVisuals(current_percent);
         elapsedTurnsBar_Script.updateTurnVisuals(current_percent, prev_percent);
+        emitter.setParameter("Intensity", ((current_percent * 4.0f) + 1.0f));
 
     }
 

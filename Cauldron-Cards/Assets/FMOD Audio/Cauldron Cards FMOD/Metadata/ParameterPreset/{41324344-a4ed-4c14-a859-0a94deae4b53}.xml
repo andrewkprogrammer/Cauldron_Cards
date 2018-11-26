@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{41324344-a4ed-4c14-a859-0a94deae4b53}">
+        <property name="name">
+            <value>Hiss</value>
+        </property>
+        <relationship name="folder">
+            <destination>{a6f79a65-7780-40c1-b872-5457ba38da69}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{343e11b4-3d2d-43e0-b194-3c160a176a7a}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{343e11b4-3d2d-43e0-b194-3c160a176a7a}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

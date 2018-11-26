@@ -36,6 +36,8 @@ GameObject:
   - component: {fileID: 4299932560695574}
   - component: {fileID: 222499242535685156}
   - component: {fileID: 114417412563302880}
+  - component: {fileID: 114761976799084538}
+  - component: {fileID: 114063478796242770}
   m_Layer: 0
   m_Name: TutPotion_Yellow
   m_TagString: Untagged
@@ -192,6 +194,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114063478796242770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694120032954214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Potion Smash
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114417412563302880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,6 +229,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatedCloud: {fileID: 1064040520172282, guid: 2a9540e931b858e40985141f84463f66,
     type: 2}
+  colour_name: yellow
+--- !u!114 &114761976799084538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694120032954214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5446bf339872e943b7df17e7b0a954c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114823371401637116
 MonoBehaviour:
   m_ObjectHideFlags: 1

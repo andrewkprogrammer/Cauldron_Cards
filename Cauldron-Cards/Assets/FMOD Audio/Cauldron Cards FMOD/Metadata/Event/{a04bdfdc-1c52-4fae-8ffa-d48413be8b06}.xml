@@ -31,6 +31,9 @@
         <relationship name="timeline">
             <destination>{8aff2821-3375-40c0-a63b-3ae0e6d2b85c}</destination>
         </relationship>
+        <relationship name="banks">
+            <destination>{af1294c7-2942-4612-b22c-95df844d70ed}</destination>
+        </relationship>
     </object>
     <object class="EventMixer" id="{19183d67-3648-4a96-b659-c9db1a29096b}">
         <relationship name="masterBus">
@@ -89,6 +92,16 @@
         <property name="length">
             <value>7.5</value>
         </property>
+        <property name="volume">
+            <value>-4</value>
+        </property>
+        <property name="pitch">
+            <value>0.600000024</value>
+        </property>
+        <relationship name="modulators">
+            <destination>{3eb6d362-f416-42bf-9588-819ee034f4dc}</destination>
+            <destination>{2fb4c6da-d535-47ea-9a8e-f68c13b632cc}</destination>
+        </relationship>
         <relationship name="sounds">
             <destination>{bf29d7c0-c0a9-40d8-a23d-d7344a7f9508}</destination>
             <destination>{a4f0d7ad-d8aa-4aed-bd2e-c34ca6bc1b76}</destination>
@@ -119,6 +132,22 @@
     </object>
     <object class="MixerBusPanner" id="{c3290c0a-81d3-40fd-a3c2-abaff8abd355}"/>
     <object class="MixerBusFader" id="{8ff5a945-b8f9-4768-ad17-7349e484fbaa}"/>
+    <object class="RandomizerModulator" id="{3eb6d362-f416-42bf-9588-819ee034f4dc}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>volume</value>
+        </property>
+        <property name="amount">
+            <value>8.39999962</value>
+        </property>
+    </object>
+    <object class="RandomizerModulator" id="{2fb4c6da-d535-47ea-9a8e-f68c13b632cc}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="amount">
+            <value>10</value>
+        </property>
+    </object>
     <object class="SingleSound" id="{bf29d7c0-c0a9-40d8-a23d-d7344a7f9508}">
         <relationship name="audioFile">
             <destination>{1322b80e-6ca6-4f76-b273-6d90326d2549}</destination>
