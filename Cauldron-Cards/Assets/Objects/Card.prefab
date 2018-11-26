@@ -18,23 +18,14 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4850066560009912}
-  - component: {fileID: 33888929755373662}
-  - component: {fileID: 65245751294426094}
-  - component: {fileID: 23315809604295836}
-  - component: {fileID: 114937606867909504}
-  - component: {fileID: 95277629563797128}
-  - component: {fileID: 114641424837831924}
-  - component: {fileID: 114262510359436722}
-=======
   - component: {fileID: 4199498732800150}
   - component: {fileID: 33559126882886234}
   - component: {fileID: 23258039380689420}
   - component: {fileID: 95924896814180576}
   - component: {fileID: 65073508832890578}
   - component: {fileID: 114212676414093008}
->>>>>>> master
+  - component: {fileID: 114805678850339276}
+  - component: {fileID: 114115843578366130}
   m_Layer: 0
   m_Name: Card_Mesh
   m_TagString: Untagged
@@ -77,11 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899376323076284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -1.2750001, y: 0.55000013, z: 0}
-=======
   m_LocalPosition: {x: -2.1250002, y: 0, z: 0}
->>>>>>> master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4199498732800150}
@@ -158,24 +145,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-<<<<<<< HEAD
---- !u!114 &114262510359436722
+--- !u!114 &114115843578366130
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1137526211279582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5446bf339872e943b7df17e7b0a954c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114641424837831924
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1137526211279582}
+  m_GameObject: {fileID: 1570575188091766}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
@@ -192,10 +167,7 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
---- !u!114 &114937606867909504
-=======
 --- !u!114 &114212676414093008
->>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -206,8 +178,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d178354289cd14d848d7a8a8950702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Front_Showing: 0
   ThisColour: {r: 0, g: 0, b: 0, a: 0}
   thisMaterial: {fileID: 0}
   FacingFront: 1
   CardNeedsReset: 0
-  SoundTriggerDelay: 1.52
+--- !u!114 &114805678850339276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570575188091766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5446bf339872e943b7df17e7b0a954c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
