@@ -50,7 +50,7 @@ public class TurnTick : MonoBehaviour {
     void startUpMusic()
     {
         emitter.playSound();
-        emitter.fadeInVolume(fadeInTime);
+        //emitter.fadeInVolume(fadeInTime);
     }
 
 
