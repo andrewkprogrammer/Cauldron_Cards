@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{085d6989-2277-40b5-957b-ff2cde3a6797}">
+        <property name="assetPath">
+            <value>Throw5.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>2.0708163265306121</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{646f9346-ea4d-43f3-8c88-5f360d4cc8ad}</destination>
+        </relationship>
+    </object>
+</objects>

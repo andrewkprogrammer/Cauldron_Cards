@@ -6,6 +6,11 @@ public class PotionMaker : MonoBehaviour {
 
     //Image
     GameObject spider;
+    GameObject throwStart;
+
+    public GameObject animatedCloud;
+    public string colour_name;
+
 
     Vector3 start_pos;
     Vector3 spider_pos;
@@ -17,13 +22,17 @@ public class PotionMaker : MonoBehaviour {
     float gravity = -50.0f;
     float yvel = 25.0f;
 
-    private void Start()
+    SoundTrigger emitter;
+
+    void Start()
     {
-        start_pos = GameObject.Find("ThrowStart").transform.position;
+        throwStart = GameObject.FindGameObjectWithTag("ThrowStart");
+        start_pos = throwStart.transform.position;
         transform.position = start_pos;
         spider = GameObject.Find("SpiderObject");
         spider_pos = spider.transform.position;
         spidercontrols = spider.GetComponent<SpiderController>();
+        emitter = GetComponent<SoundTrigger>();
     }
     void Update()
     {
@@ -40,8 +49,16 @@ public class PotionMaker : MonoBehaviour {
         {
             int damage = Random.Range(1, 5);
             spidercontrols.applyDamage(damage);
+            Instantiate(animatedCloud);
+            string elemental = "";
+            if (colour_name == "red") { elemental = "Fire"; }
+            else if (colour_name == "yellow") { elemental = "Electricity"; }
+            else if(colour_name == "green") { elemental = "Grass"; }
+            else if(colour_name == "blue") { elemental = "Ice"; }
+            emitter.setParameter(elemental, 1.0f);
+            emitter.playSound();
             Destroy(gameObject);
-            //Play smash animations and sounds
+
         }
 
     }

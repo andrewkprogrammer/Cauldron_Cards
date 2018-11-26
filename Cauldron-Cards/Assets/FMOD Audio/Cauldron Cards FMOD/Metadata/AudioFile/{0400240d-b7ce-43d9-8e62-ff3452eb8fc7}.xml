@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{0400240d-b7ce-43d9-8e62-ff3452eb8fc7}">
+        <property name="assetPath">
+            <value>TorchSwoosh_S08FI.66.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.6106666666666667</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{646f9346-ea4d-43f3-8c88-5f360d4cc8ad}</destination>
+        </relationship>
+    </object>
+</objects>

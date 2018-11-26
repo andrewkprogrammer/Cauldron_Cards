@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{ed24debe-6b5c-4535-bffb-9e9165c2cb38}">
+        <property name="name">
+            <value>Bubbles</value>
+        </property>
+        <relationship name="folder">
+            <destination>{a6f79a65-7780-40c1-b872-5457ba38da69}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{0dd3f6e1-9013-440a-9217-cbd7c3a1c277}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{0dd3f6e1-9013-440a-9217-cbd7c3a1c277}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

@@ -20,12 +20,16 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
     public bool CardNeedsReset = false;
 
+    SoundTrigger emitter;
+
     void Start()
     {
         CardController = (CardGridController)GameObject.Find("Card_Grid").GetComponent(typeof(CardGridController));
         animator = GetComponent<Animator>();
         ThisColour = Color.white;
         CardController.SendCardInfo(this);
+
+        emitter = GetComponent<SoundTrigger>();
 
     }
 
@@ -36,6 +40,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
             animator.SetTrigger("Display");
             Front_Showing = true;
             CardController.clickedCards.Add(this);
+            emitter.playSound();
         }
      }
 
@@ -62,6 +67,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     {
         animator.SetTrigger("Reset");
         Front_Showing = false;
+        emitter.playSound();
     }
 
     private void reset()

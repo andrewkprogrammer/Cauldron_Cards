@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{54cd6ae8-b605-43b8-9c4b-bc134e299ef4}">
+        <property name="assetPath">
+            <value>Flip5.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.0985260770975056</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{646f9346-ea4d-43f3-8c88-5f360d4cc8ad}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{eab610e7-8a97-4bd8-9c1b-baa67f0631ce}">
+        <property name="assetPath">
+            <value>SnakeHiss_S011AN.58.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.7999999999999998</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{646f9346-ea4d-43f3-8c88-5f360d4cc8ad}</destination>
+        </relationship>
+    </object>
+</objects>

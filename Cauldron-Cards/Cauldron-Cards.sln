@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cauldron-Cards", "Cauldron-Cards.csproj", "{5240173B-6BFD-6003-3ABA-4DF51783AA72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cauldron-Cards.Plugins", "Cauldron-Cards.Plugins.csproj", "{B2D3AA0F-040A-6DE0-BA77-1BBEA885910D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cauldron-Cards.Editor.Plugins", "Cauldron-Cards.Editor.Plugins.csproj", "{BF44AE33-E99A-47C7-8094-9979E3F2C5D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cauldron-Cards.Editor", "Cauldron-Cards.Editor.csproj", "{CE920739-0B4E-8DC0-AF6F-10D49C980780}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{5240173B-6BFD-6003-3ABA-4DF51783AA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5240173B-6BFD-6003-3ABA-4DF51783AA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5240173B-6BFD-6003-3ABA-4DF51783AA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D3AA0F-040A-6DE0-BA77-1BBEA885910D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D3AA0F-040A-6DE0-BA77-1BBEA885910D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D3AA0F-040A-6DE0-BA77-1BBEA885910D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D3AA0F-040A-6DE0-BA77-1BBEA885910D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF44AE33-E99A-47C7-8094-9979E3F2C5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF44AE33-E99A-47C7-8094-9979E3F2C5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF44AE33-E99A-47C7-8094-9979E3F2C5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF44AE33-E99A-47C7-8094-9979E3F2C5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE920739-0B4E-8DC0-AF6F-10D49C980780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE920739-0B4E-8DC0-AF6F-10D49C980780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE920739-0B4E-8DC0-AF6F-10D49C980780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE920739-0B4E-8DC0-AF6F-10D49C980780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
