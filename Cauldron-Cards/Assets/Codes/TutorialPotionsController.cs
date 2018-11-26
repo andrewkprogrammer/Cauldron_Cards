@@ -8,6 +8,7 @@ public class TutorialPotionsController : MonoBehaviour {
     public GameObject yellowPotion;
     public GameObject greenPotion;
     public GameObject bluePotion;
+    GameObject Cat;
 
     //GameObject character;
 
@@ -20,18 +21,19 @@ public class TutorialPotionsController : MonoBehaviour {
         potion_lookup.Add(InventoryController.colourNames.Yellow, yellowPotion);
         potion_lookup.Add(InventoryController.colourNames.Green, greenPotion);
         potion_lookup.Add(InventoryController.colourNames.Blue, bluePotion);
-
+        Cat = GameObject.Find("Cat_Model");
         //character     = GameObject.Find("Character");
     }
 	
 	public void makePotion(InventoryController.colourNames colour)
     {
         Instantiate(potion_lookup[colour]);
-
+        Cat.GetComponent<Animator>().SetTrigger("Match");
     }
 
     public void makePotion(Color colour)
     {
+        Cat.GetComponent<Animator>().SetTrigger("Match");
         if (colour == Color.red)
         {
             Instantiate(redPotion);
