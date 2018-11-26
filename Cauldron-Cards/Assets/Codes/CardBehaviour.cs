@@ -7,18 +7,22 @@ using UnityEngine.EventSystems;
 
 public class CardBehaviour : MonoBehaviour, IPointerClickHandler
  {
-
-    bool Front_Showing = false;
-    float timer = 0.0f;
-
+    [HideInInspector]
+    public bool Front_Showing = false;
+    [HideInInspector]
     public Color ThisColour;
-    
-    Animator animator;
+    [HideInInspector]
+    public Material thisMaterial;
+    [HideInInspector]
     public bool FacingFront = true;
-
-    CardGridController CardController;
-
+    [HideInInspector]
     public bool CardNeedsReset = false;
+
+
+    float timer = 0.0f;
+    CardGridController CardController;
+    Animator animator;
+
 
     SoundTrigger emitter;
 
@@ -28,9 +32,8 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         animator = GetComponent<Animator>();
         ThisColour = Color.white;
         CardController.SendCardInfo(this);
-
+        thisMaterial = GetComponent<MeshRenderer>().material;
         emitter = GetComponent<SoundTrigger>();
-
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -42,25 +45,6 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
             CardController.clickedCards.Add(this);
             emitter.playSound();
         }
-     }
-
-     // Use this for initialization
-
-
-     // Update is called once per frame
-     void Update()
-     {
-
-        if (ThisColour == Color.white)
-        {
-            ThisColour = CardController.GiveColour(this);
-            transform.gameObject.GetComponent<MeshRenderer>().material.color = ThisColour;
-            
-        }
-
-        if (CardNeedsReset)
-            reset();
-        
      }
 
     public void unflip()
@@ -86,4 +70,17 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
     }
 
+     // Update is called once per frame
+     void Update()
+     {
+
+        if(!thisMaterial.Equals(GetComponent<MeshRenderer>().material))
+        {
+            GetComponent<MeshRenderer>().material = thisMaterial;
+        }
+
+        if (CardNeedsReset)
+            reset();
+        
+     }
 }
