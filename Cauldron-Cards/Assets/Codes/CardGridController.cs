@@ -137,23 +137,26 @@ public class CardGridController : MonoBehaviour {
 
         if(pairsMade >= 8)
         {
-            if(TexturePool.Count != 0)
-            initializeColourPool();
+            if(TexturePool.Count == 0)
+                initializeColourPool();
 
             timer += Time.deltaTime;
 
             if (timer > 3.5f)
             {
-                foreach(CardBehaviour card in allCards)
-                    card.thisMaterial = GiveMat();
                 pairsMade = 0;
                 timer = 0.0f;
+                foreach (CardBehaviour card in allCards)
+                {
+                    if(card != null)
+                    card.thisMaterial = GiveMat();
+                }
             }
             else if (timer > 1.7f)
             {
                 foreach (CardBehaviour card in allCards)
                 {
-                    if(!card.Front_Showing)
+                    if(card.Front_Showing)
                     card.unflip();
                 }
             }

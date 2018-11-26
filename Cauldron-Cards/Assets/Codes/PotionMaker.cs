@@ -47,7 +47,7 @@ public class PotionMaker : MonoBehaviour {
 
         if (throw_t >= 1.0f)
         {
-            int damage = Random.Range(1, 5);
+            int damage = 1;
             spidercontrols.applyDamage(damage);
             Instantiate(animatedCloud);
             string elemental = "";
