@@ -16,8 +16,7 @@ public class PotionMaker : MonoBehaviour {
     Vector3 spider_pos;
 
     SpiderController spidercontrols;
-
-    float deltaTimeMultiplier = 1.0f;
+    
     float throw_t = 0.0f;
     float gravity = -50.0f;
     float yvel = 25.0f;
@@ -36,30 +35,28 @@ public class PotionMaker : MonoBehaviour {
     }
     void Update()
     {
-
-        throw_t += Time.deltaTime * deltaTimeMultiplier;
-
+        throw_t += Time.deltaTime;
+        
         Vector3 updated_pos;
-
+        
         updated_pos.x = start_pos.x + (spider_pos.x - start_pos.x) * throw_t;
         updated_pos.y = start_pos.y + yvel * throw_t + (0.5f * gravity * throw_t * throw_t);
         transform.position = new Vector3(updated_pos.x, updated_pos.y, start_pos.z);
-
+        
         if (throw_t >= 1.0f)
         {
-            int damage = 1;
+            int damage = 2;
             spidercontrols.applyDamage(damage);
             Instantiate(animatedCloud);
             string elemental = "";
             if (colour_name == "red") { elemental = "Fire"; }
             else if (colour_name == "yellow") { elemental = "Electricity"; }
-            else if(colour_name == "green") { elemental = "Grass"; }
-            else if(colour_name == "blue") { elemental = "Ice"; }
+            else if (colour_name == "green") { elemental = "Grass"; }
+            else if (colour_name == "blue") { elemental = "Ice"; }
             emitter.setParameter(elemental, 1.0f);
             emitter.playSound();
             Destroy(gameObject);
-
+        
         }
-
     }
 }

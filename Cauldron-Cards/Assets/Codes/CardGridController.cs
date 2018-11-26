@@ -8,7 +8,8 @@ public class CardGridController : MonoBehaviour {
     const int AmountOfEachColour = 4;
     int cardsFacingForward = 16;
     int pairsMade = 0;
-    float timer;
+    float ShuffleTimer;
+    float PotionThrowTimer;
 
     [HideInInspector]
     public List<Color> ColourPool;
@@ -25,6 +26,8 @@ public class CardGridController : MonoBehaviour {
     TurnTick turnTick;
 
     Animator CatAnimator;
+
+    List<Color> throwQueue;
 
     // Use this for initialization
     void Start ()
@@ -44,11 +47,12 @@ public class CardGridController : MonoBehaviour {
         clickedCards = new List<CardBehaviour>();
         tutorialPotionsController = GameObject.Find("TutorialPotionController").GetComponent<TutorialPotionsController>();
         turnTick = GameObject.Find("Turn-Ticker").GetComponent<TurnTick>();
+        throwQueue = new List<Color>();
 
         StartCoroutine(setStartCardMaterial());
     }
 
-    IEnumerator setStartCardMaterial()
+    IEnumerator setStartCardMaterial() // this is the initial function for setting each card's texture
     {
         yield return new WaitForEndOfFrame();
         foreach(var c in allCards)
@@ -60,16 +64,8 @@ public class CardGridController : MonoBehaviour {
 
     }
 
-    private void initializeColourPool()
+    private void initializeColourPool() //this function is called prior to giving each card a texture
     {
-        ColourPool.Clear();
-        for (int i = 0; i < 4; i++)
-        {
-            for (int j = 0; j < AmountOfEachColour; j++)
-            {
-                ColourPool.Add(colours[i]);
-            }
-        }
         
         for( int i = 0; i < 4; i++)
         {
@@ -81,7 +77,7 @@ public class CardGridController : MonoBehaviour {
 
     }
 
-    public void SendCardInfo(CardBehaviour card)
+    public void SendCardInfo(CardBehaviour card) //each card calls this function to add itself to "allCards"
     {
         allCards.Add(card);
     }
@@ -103,19 +99,19 @@ public class CardGridController : MonoBehaviour {
         }
     }
 
-    void throwPotion()
+    void throwPotion() //a function telling the potion controller to make a potion of a certain colour
     {
-        if(clickedCards[0].thisMaterial.name == "Root")
-            tutorialPotionsController.makePotion(Color.red);
-        else if(clickedCards[0].thisMaterial.name == "Ore")
-            tutorialPotionsController.makePotion(Color.yellow);
+        if (clickedCards[0].thisMaterial.name == "Root")
+            throwQueue.Add(Color.red);
+        else if (clickedCards[0].thisMaterial.name == "Ore")
+            throwQueue.Add(Color.yellow);
         else if (clickedCards[0].thisMaterial.name == "Mushroom")
-            tutorialPotionsController.makePotion(Color.blue);
+            throwQueue.Add(Color.blue);
         else if (clickedCards[0].thisMaterial.name == "Herb")
-            tutorialPotionsController.makePotion(Color.green);
+            throwQueue.Add(Color.green);
     }
 
-    public Material GiveMat()
+    public Material GiveMat() //this function is called by each card when it needs a new texture
     {
         int randnum = Random.Range(0, TexturePool.Count);
         Material returnTexture = TexturePool[randnum];
@@ -126,7 +122,7 @@ public class CardGridController : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-		if(clickedCards.Count >= 2 && !CardsAreSame())
+		if(clickedCards.Count >= 2 && !CardsAreSame()) // if cards are different, they get unflipped, otherwise they stay flipped and a potion is thrown
         {
             foreach (CardBehaviour card in clickedCards)
             {
@@ -135,32 +131,45 @@ public class CardGridController : MonoBehaviour {
             clickedCards.Clear();
         }
 
-        if(pairsMade >= 8)
+        if (throwQueue.Count > 0)
         {
-            if(TexturePool.Count == 0)
-                initializeColourPool();
-
-            timer += Time.deltaTime;
-
-            if (timer > 3.5f)
+            PotionThrowTimer += Time.deltaTime;
+            if (PotionThrowTimer >= 1.5f)
             {
-                pairsMade = 0;
-                timer = 0.0f;
-                foreach (CardBehaviour card in allCards)
-                {
-                    if(card != null)
-                    card.thisMaterial = GiveMat();
-                }
+                tutorialPotionsController.makePotion(throwQueue[0]);
+                throwQueue.RemoveAt(0);
+                PotionThrowTimer = 0.0f;
             }
-            else if (timer > 1.7f)
-            {
-                foreach (CardBehaviour card in allCards)
-                {
-                    if(card.Front_Showing)
-                    card.unflip();
-                }
-            }
-
         }
-	}
+
+        if (pairsMade >= 8)
+            Reshuffle();
+    }
+
+    void Reshuffle() // once 8 pairs are made (the total possible at once) the cards are reshuffled)
+    {
+        if (TexturePool.Count == 0)
+            initializeColourPool();
+
+        ShuffleTimer += Time.deltaTime;
+
+        if (ShuffleTimer > 3.5f)
+        {
+            pairsMade = 0;
+            ShuffleTimer = 0.0f;
+            foreach (CardBehaviour card in allCards)
+            {
+                if (card != null)
+                    card.thisMaterial = GiveMat();
+            }
+        }
+        else if (ShuffleTimer > 1.7f)
+        {
+            foreach (CardBehaviour card in allCards)
+            {
+                if (card.Front_Showing)
+                    card.unflip();
+            }
+        }
+    }
 }
