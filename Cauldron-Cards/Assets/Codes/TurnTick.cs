@@ -19,6 +19,7 @@ public class TurnTick : MonoBehaviour {
     SceneLoaderBehaviour sceneLoaderBehaviour;
 
     SoundTrigger emitter;
+    public float fadeInTime;
 
     public enum EventType
     {
@@ -43,8 +44,14 @@ public class TurnTick : MonoBehaviour {
         spider_Script = GameObject.Find("SpiderObject").GetComponent<SpiderController>();
         sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
         emitter = GetComponent<SoundTrigger>();
+        startUpMusic();
     }
 
+    void startUpMusic()
+    {
+        emitter.playSound();
+        emitter.fadeInVolume(fadeInTime);
+    }
 
 
     void updateTurnVisuals()

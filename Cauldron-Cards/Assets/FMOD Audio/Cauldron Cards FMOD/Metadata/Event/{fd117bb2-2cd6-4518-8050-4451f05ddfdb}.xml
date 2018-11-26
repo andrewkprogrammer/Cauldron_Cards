@@ -147,7 +147,7 @@
             <value>-3</value>
         </property>
         <property name="pitch">
-            <value>-0.800000012</value>
+            <value>-0.5</value>
         </property>
         <relationship name="modulators">
             <destination>{e0384409-0c5c-448b-824d-dd7cfa41e67b}</destination>
@@ -199,7 +199,7 @@
             <value>-4</value>
         </property>
         <property name="pitch">
-            <value>2</value>
+            <value>2.4000001</value>
         </property>
         <relationship name="modulators">
             <destination>{6d8258cc-acb4-4cab-ad2b-ad0eabda7052}</destination>
@@ -248,7 +248,7 @@
             <value>-3</value>
         </property>
         <property name="pitch">
-            <value>-3.4000001</value>
+            <value>-0.300000012</value>
         </property>
         <relationship name="modulators">
             <destination>{bbbb6db0-048a-4dcd-a107-3fb10835e3f4}</destination>
@@ -298,7 +298,7 @@
             <value>pitch</value>
         </property>
         <property name="amount">
-            <value>7.5</value>
+            <value>13.5</value>
         </property>
     </object>
     <object class="Automator" id="{0a04d5a8-4ad4-4d8d-8276-8cbd01aebff2}">

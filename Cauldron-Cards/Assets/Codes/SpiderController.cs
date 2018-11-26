@@ -12,6 +12,8 @@ public class SpiderController : MonoBehaviour {
     Text damageText;
 
     SceneLoaderBehaviour sceneLoaderBehaviour;
+
+    SoundTrigger emitter;
     
 
     float current_percent;
@@ -23,6 +25,8 @@ public class SpiderController : MonoBehaviour {
     bool isFrozen;
     int rollHelper = 0;
 
+    public string nextSceneName;
+
     // Use this for initialization
     void Start () {
         SPDR_start_pos = GameObject.Find("SpiderStart").transform.position;
@@ -30,6 +34,7 @@ public class SpiderController : MonoBehaviour {
         damageObj = GameObject.Find("damageText");
         damageText = damageObj.GetComponent<Text>();
         sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
+        emitter = GetComponent<SoundTrigger>();
     }
 	
 	// Update is called once per frame
@@ -51,6 +56,8 @@ public class SpiderController : MonoBehaviour {
     public void updateTurnVisuals(float currentPercent)
     {
         current_percent = currentPercent;
+        emitter.setParameter("Proximity", current_percent);
+        emitter.playSound();
     }
 
     public void applyDamage(int damage)
@@ -128,7 +135,7 @@ public class SpiderController : MonoBehaviour {
     {
         if (health <= 0)
         {
-            sceneLoaderBehaviour.loadScene("Win Screen");
+            sceneLoaderBehaviour.loadScene(nextSceneName);
         }
     }
 
