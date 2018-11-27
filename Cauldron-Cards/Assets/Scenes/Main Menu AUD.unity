@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -807,7 +807,7 @@ RectTransform:
   m_GameObject: {fileID: 1028416597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 5, z: 6.15434}
+  m_LocalScale: {x: 10, y: 7, z: 6.15434}
   m_Children: []
   m_Father: {fileID: 1046666837}
   m_RootOrder: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: f334c4ab730cf424ebf998e1fdd7e6ce, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1fd1484578aaf3746a77b04ad928125e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
