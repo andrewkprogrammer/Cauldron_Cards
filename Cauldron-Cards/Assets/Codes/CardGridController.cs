@@ -10,7 +10,10 @@ public class CardGridController : MonoBehaviour {
     int pairsMade = 0;
     float ShuffleTimer;
     float PotionThrowTimer;
+    float flipTimer;
 
+    [HideInInspector]
+    public bool ClickedCardsNeedFlip = false;
     [HideInInspector]
     public List<Color> ColourPool;
     Color[] colours = { Color.red, Color.blue, Color.yellow, Color.green }; // a pool of colours to give to cards
@@ -85,9 +88,13 @@ public class CardGridController : MonoBehaviour {
     //  checks the two selected cards and returns true if they are the same colour
     private bool CardsAreSame()
     {
-        if (clickedCards[0].thisMaterial.name != clickedCards[1].thisMaterial.name)
+        if (clickedCards[0].thisMaterial.name != clickedCards[1].thisMaterial.name && !ClickedCardsNeedFlip)
         {
             turnTick.onTurnTick();
+            return false;
+        }
+        else if(ClickedCardsNeedFlip)
+        {
             return false;
         }
         else
@@ -97,6 +104,7 @@ public class CardGridController : MonoBehaviour {
             pairsMade++;
             return true;
         }
+        
     }
 
     void throwPotion() //a function telling the potion controller to make a potion of a certain colour
@@ -124,11 +132,22 @@ public class CardGridController : MonoBehaviour {
     {
 		if(clickedCards.Count >= 2 && !CardsAreSame()) // if cards are different, they get unflipped, otherwise they stay flipped and a potion is thrown
         {
-            foreach (CardBehaviour card in clickedCards)
+            ClickedCardsNeedFlip = true;
+        }
+
+        if (ClickedCardsNeedFlip)
+        {
+            flipTimer += Time.deltaTime;
+            if (flipTimer >= 1.6f)
             {
-                card.unflip();
+                foreach (CardBehaviour card in clickedCards)
+                {
+                    card.unflip();
+                }
+                clickedCards.Clear();
+                ClickedCardsNeedFlip = false;
+                flipTimer = 0.0f;
             }
-            clickedCards.Clear();
         }
 
         if (throwQueue.Count > 0)

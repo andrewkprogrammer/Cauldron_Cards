@@ -36,9 +36,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         emitter = GetComponent<SoundTrigger>();
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData) // runs when a card is clicked/tapped
      {
-        if (!Front_Showing && !CardNeedsReset)
+        if (!Front_Showing && !CardNeedsReset && !CardController.ClickedCardsNeedFlip)
         {
             animator.SetTrigger("Display");
             Front_Showing = true;
@@ -47,14 +47,14 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         }
      }
 
-    public void unflip()
+    public void unflip() // this function simply flips the card to its back 
     {
         animator.SetTrigger("Reset");
         Front_Showing = false;
         emitter.playSound();
     }
 
-    private void reset()
+    private void reset() //this function runs when all cards have been matched up
     {
         timer += Time.deltaTime;
         if (timer > 3.5f)
