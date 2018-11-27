@@ -18,7 +18,8 @@ public class TurnTick : MonoBehaviour {
 
     SceneLoaderBehaviour sceneLoaderBehaviour;
 
-    SoundTrigger emitter;
+    SoundTransitionTrigger emitter;
+    MusicControls musicControls;
     public float fadeInTime;
 
     public enum EventType
@@ -43,14 +44,9 @@ public class TurnTick : MonoBehaviour {
         //m_eventList[5] = EventType.BadEvent;
         spider_Script = GameObject.Find("SpiderObject").GetComponent<SpiderController>();
         sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
-        emitter = GetComponent<SoundTrigger>();
-        startUpMusic();
-    }
-
-    void startUpMusic()
-    {
+        emitter = GetComponent<SoundTransitionTrigger>();
+        musicControls = GameObject.Find("Music Emitter").GetComponent<MusicControls>();
         emitter.playSound();
-        //emitter.fadeInVolume(fadeInTime);
     }
 
 
@@ -61,7 +57,7 @@ public class TurnTick : MonoBehaviour {
         prev_percent = ((float)(Turns_Elapsed - 1) / (float)Turns_Total);
         spider_Script.updateTurnVisuals(current_percent);
         elapsedTurnsBar_Script.updateTurnVisuals(current_percent, prev_percent);
-        emitter.setParameter("Intensity", ((current_percent * 4.0f) + 1.0f));
+        emitter.setParameter("Intensity", ((current_percent * 3.0f) + 1.0f));
 
     }
 
@@ -87,6 +83,6 @@ public class TurnTick : MonoBehaviour {
 
     void runGameOver()
     {
-        sceneLoaderBehaviour.loadScene("GameOver");
+        musicControls.turnOff("Gameover AUD");
     }
 }

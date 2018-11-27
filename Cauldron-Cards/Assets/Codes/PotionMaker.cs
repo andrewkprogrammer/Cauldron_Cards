@@ -22,7 +22,7 @@ public class PotionMaker : MonoBehaviour {
     float gravity = -50.0f;
     float yvel = 25.0f;
 
-    SoundTrigger emitter;
+    SoundTransitionTrigger emitter;
 
     void Start()
     {
@@ -32,7 +32,7 @@ public class PotionMaker : MonoBehaviour {
         spider = GameObject.Find("SpiderObject");
         spider_pos = spider.transform.position;
         spidercontrols = spider.GetComponent<SpiderController>();
-        emitter = GetComponent<SoundTrigger>();
+        emitter = GetComponent<SoundTransitionTrigger>();
     }
     void Update()
     {
@@ -47,8 +47,7 @@ public class PotionMaker : MonoBehaviour {
 
         if (throw_t >= 1.0f)
         {
-            int damage = Random.Range(1, 5);
-            spidercontrols.applyDamage(damage);
+            spidercontrols.applyDamage(1);
             Instantiate(animatedCloud);
             string elemental = "";
             if (colour_name == "red") { elemental = "Fire"; }

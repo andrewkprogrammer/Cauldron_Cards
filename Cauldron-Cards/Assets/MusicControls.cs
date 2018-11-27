@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class MusicControls : MonoBehaviour {
 
-    SoundTrigger emitter;
+    SoundTransitionTrigger emitter;
     public float fadeOutTime;
+
+    public string nextSceneName;
+
+    SceneLoaderBehaviour sceneLoader;
 
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(this.gameObject);
-        emitter = GetComponent<SoundTrigger>();
+        emitter = GetComponent<SoundTransitionTrigger>();
+        sceneLoader = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
 	}
 
-    void Update()
-    {
-         if (emitter.FadedOutComplete == true)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     // Update is called once per frame
     public void turnOff () {
+        emitter.setNextSceneName(nextSceneName);
         emitter.fadeOutVolume(fadeOutTime);
 	}
+    public void turnOff(string sceneName)
+    {
+        emitter.setNextSceneName(sceneName);
+        emitter.fadeOutVolume(fadeOutTime);
+    }
 }

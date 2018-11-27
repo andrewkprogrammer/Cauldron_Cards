@@ -398,6 +398,9 @@
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\EventFolder\{6f1137ad-a594-46bb-82fa-bb72fe847d23}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\EventFolder\{84a54d7c-d8b0-4f2b-873f-970a048eebf1}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\EventFolder\{8e03a1de-a077-47ac-aa13-d4a9024d0275}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Group\{475b1bd1-bf44-4e94-abf2-46ef6307f62d}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Group\{56df4e46-5eef-40f2-bade-ece0960e5efd}.xml" />
+    <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Group\{f1c34344-2aff-41e2-9bb8-e817bbc39736}.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Master.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\Mixer.xml" />
     <None Include="Assets\FMOD Audio\Cauldron Cards FMOD\Metadata\ParameterPreset\{21e68522-9d86-4450-ab0e-2e7ab60428e6}.xml" />

@@ -8,12 +8,11 @@ public class SpiderController : MonoBehaviour {
     Vector3 SPDR_start_pos;
     Vector3 SPDR_end_pos;
 
-    GameObject damageObj;
-    Text damageText;
 
     SceneLoaderBehaviour sceneLoaderBehaviour;
 
-    SoundTrigger emitter;
+    SoundTransitionTrigger emitter;
+    MusicControls musicControls;
     
 
     float current_percent;
@@ -25,16 +24,13 @@ public class SpiderController : MonoBehaviour {
     bool isFrozen;
     int rollHelper = 0;
 
-    public string nextSceneName;
-
     // Use this for initialization
     void Start () {
         SPDR_start_pos = GameObject.Find("SpiderStart").transform.position;
         SPDR_end_pos = GameObject.Find("SpiderEnd").transform.position;
-        damageObj = GameObject.Find("damageText");
-        damageText = damageObj.GetComponent<Text>();
         sceneLoaderBehaviour = GameObject.Find("SceneLoader").GetComponent<SceneLoaderBehaviour>();
-        emitter = GetComponent<SoundTrigger>();
+        emitter = GetComponent<SoundTransitionTrigger>();
+        musicControls = GameObject.Find("Music Emitter").GetComponent<MusicControls>();
     }
 	
 	// Update is called once per frame
@@ -63,7 +59,6 @@ public class SpiderController : MonoBehaviour {
     public void applyDamage(int damage)
     {
         health -= damage;
-        damageObj.GetComponent<HealthText>().runText(damage);
         healthCheck();
     }
 
@@ -101,7 +96,7 @@ public class SpiderController : MonoBehaviour {
     void attemptStatusEffectCure()
     {
         int cureRoll = Random.Range(1, 9) + rollHelper;
-        if (cureRoll >= 8)
+        if (cureRoll >= 7)
         {
             if (isPoisoned && !isFrozen)
             {
@@ -135,7 +130,7 @@ public class SpiderController : MonoBehaviour {
     {
         if (health <= 0)
         {
-            sceneLoaderBehaviour.loadScene(nextSceneName);
+            musicControls.turnOff("Game Win AUD");
         }
     }
 

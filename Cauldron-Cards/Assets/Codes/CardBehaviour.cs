@@ -24,7 +24,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     Animator animator;
 
 
-    SoundTrigger emitter;
+    SoundTransitionTrigger emitter;
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         ThisColour = Color.white;
         CardController.SendCardInfo(this);
         thisMaterial = GetComponent<MeshRenderer>().material;
-        emitter = GetComponent<SoundTrigger>();
+        emitter = GetComponent<SoundTransitionTrigger>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
