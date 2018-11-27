@@ -304,7 +304,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 172455659}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -652,6 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutTime: 2.02
+  nextSceneName: Main Menu AUD
 --- !u!114 &1162250210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +665,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInTime: 2.2
-  fadeOutTime: 0.36
   FadedOutComplete: 0
   audioName: music
   nextSceneName: Main Menu AUD
@@ -798,7 +798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.299927, y: -164.4}
+  m_AnchoredPosition: {x: -391, y: 208}
   m_SizeDelta: {x: 195, y: 96.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241157480
@@ -896,7 +896,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: b416e45f7edcf824591b1daeda98026c, type: 3}
+  m_Texture: {fileID: 2800000, guid: 678e5eb956f0984468902079a6f72821, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

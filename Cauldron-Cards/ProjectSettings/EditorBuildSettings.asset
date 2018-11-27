@@ -5,15 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main Menu AUD.unity
     guid: 9f5444e8dcbaab4438f8e1e01dd09c45
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tutorial AUDIO.unity
     guid: 8ddedbec14e2e3749a95501c5be58d37
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Audio_Scene.unity
     guid: 03173d4d4bcaee24fbd0b73f349dcbbd
-  - enabled: 0
-    path: Assets/Scenes/Win Screen AUDIO.unity
-    guid: 28835ce00ab83eb47896b0a0b1400f94
+  - enabled: 1
+    path: Assets/Scenes/GameOver AUD.unity
+    guid: 29089b575ba88f940979b8a7fe7e961f
+  - enabled: 1
+    path: Assets/Scenes/Game Win AUD.unity
+    guid: 9abadd7802b740c45a2aa5280c4c1128

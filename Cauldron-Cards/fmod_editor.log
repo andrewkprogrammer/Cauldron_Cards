@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 10.67ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000003E1A5ED8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000003D9C32E8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,143 +15,21 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 6470208
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 57952
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004057F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FED7B81220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FED7B811F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FED7B812F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FED7B813B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000048D37FB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='IFCE2_Stirring_Stir_09_FA', format=2, channels=2, frequency=48000, lengthbytes=6112, lengthpcm=21349, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 6470208
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 57952
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004057F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FED7B81220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FED7B811F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FED7B812F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FED7B813B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000048D37FB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='IFCE2_Stirring_Stir_16_FA', format=2, channels=2, frequency=48000, lengthbytes=12960, lengthpcm=46999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 6470208
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 57952
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004057F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FED7B81220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FED7B811F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FED7B812F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FED7B813B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000048D37FB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BubbleSurfaceSingle_SFXB._2', format=2, channels=2, frequency=48000, lengthbytes=21280, lengthpcm=61952, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.892752.
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] SystemI::createSound                     : filename = Assets\FMOD Audio\Cauldron Cards FMOD\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000000048C9B178 : node = 0000000049820370
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF40478.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000048C9B178
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD Audio\Cauldron Cards FMOD\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6470208
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 57952
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000049820488
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drums_OneShots_Textures_Bubbles', format=2, channels=2, frequency=48000, lengthbytes=216416, lengthpcm=624860, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.630957.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000048C9B178
-[LOG] SoundI::getSubSound                      : sound 0000000048C9B178.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000048C9B4D8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000048C9B4D8
-[LOG] SoundI::release                          : Drums_OneShots_Textures_Bubbles (000000003F903818)
-[LOG] SoundI::release                          :     Drums_OneShots_Textures_Bubbles (000000003FF3FFE8)
-[LOG] SoundI::release                          :     Drums_OneShots_Textures_Bubbles (0000000048BDF558)
-[LOG] SoundI::release                          : Drama + Strings (0000000048BDFF78)
-[LOG] SoundI::release                          :     Drama + Strings (0000000049793838)
-[LOG] SoundI::release                          :     Drama + Strings (0000000048C0B338)
-[LOG] SoundI::release                          : Base Synth (0000000048BE0128)
-[LOG] SoundI::release                          :     Base Synth (0000000049793698)
-[LOG] SoundI::release                          :     Base Synth (0000000048C0B188)
-[LOG] SoundI::release                          : Drama + Synths (00000000489B2228)
-[LOG] SoundI::release                          :     Drama + Synths (00000000497934F8)
-[LOG] SoundI::release                          :     Drama + Synths (000000003FE8ECD8)
-[LOG] SoundI::release                          : Kick Drums (00000000489B1B68)
-[LOG] SoundI::release                          :     Kick Drums (0000000049793358)
-[LOG] SoundI::release                          :     Kick Drums (000000003FE8E108)
-[LOG] SoundI::release                          : Base Organic (00000000489B1658)
-[LOG] SoundI::release                          :     Base Organic (00000000497931B8)
-[LOG] SoundI::release                          :     Base Organic (000000003FE8E978)
-[LOG] SoundI::release                          : Conga (00000000489B19B8)
-[LOG] SoundI::release                          :     Conga (0000000049793018)
-[LOG] SoundI::release                          :     Conga (000000003FE8E468)
-[LOG] SoundI::release                          : Drama ++ sYNTHS (00000000489B1808)
-[LOG] SoundI::release                          :     Drama ++ sYNTHS (0000000049792E78)
-[LOG] SoundI::release                          :     Drama ++ sYNTHS (000000003FE8E618)
-[LOG] SoundI::release                          : Rims (00000000489B1D18)
-[LOG] SoundI::release                          :     Rims (0000000049792CD8)
-[LOG] SoundI::release                          :     Rims (000000003FE8EB28)
-[LOG] SoundI::release                          : Drama ++ Winds (00000000489B1EC8)
-[LOG] SoundI::release                          :     Drama ++ Winds (000000003FF404C8)
-[LOG] SoundI::release                          :     Drama ++ Winds (0000000048BDFDC8)
-[LOG] SoundI::release                          : Drums_OneShots_Textures_Bubbles (0000000048C9B178)
-[LOG] SoundI::release                          :     Drums_OneShots_Textures_Bubbles (0000000048C9A158)
-[LOG] SoundI::release                          :     Drums_OneShots_Textures_Bubbles (0000000048C9B4D8)
-[LOG] SoundI::release                          : PL_CS4VL_Fire_Crackle_Loop (00000000489B23D8)
-[LOG] SoundI::release                          :     PL_CS4VL_Fire_Crackle_Loop (000000003FF3FE48)
-[LOG] SoundI::release                          :     PL_CS4VL_Fire_Crackle_Loop (0000000048BDF8B8)
-[LOG] SoundI::release                          : ESM_Forest_Woodland_Loop_Ambience_Nature_Camp_Tribal_Organic_Insect (0000000048C95FC8)
-[LOG] SoundI::release                          :     ESM_Forest_Woodland_Loop_Ambience_Nature_Camp_Tribal_Organic_Insect (000000003FF40188)
-[LOG] SoundI::release                          :     ESM_Forest_Woodland_Loop_Ambience_Nature_Camp_Tribal_Organic_Insect (0000000048BE02D8)
-[LOG] SoundI::release                          :  (000000003FEF01C8)
-[LOG] SoundI::release                          :     IFCE2_Stirring_Stir_09_FA (00000000497939D8)
-[LOG] SoundI::release                          :  (000000003FEF0A68)
-[LOG] SoundI::release                          :     IFCE2_Stirring_Stir_16_FA (0000000048C99E18)
-[LOG] SoundI::release                          :  (000000003FEF0BD8)
-[LOG] SoundI::release                          :     BubbleSurfaceSingle_SFXB._2 (0000000048C99FB8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 10.67ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
