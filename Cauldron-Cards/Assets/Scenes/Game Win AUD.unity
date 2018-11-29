@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5446bf339872e943b7df17e7b0a954c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInTime: 2.2
+  fadeInTime: 4.23
   FadedOutComplete: 0
   audioName: music
   nextSceneName: Main Menu AUD
