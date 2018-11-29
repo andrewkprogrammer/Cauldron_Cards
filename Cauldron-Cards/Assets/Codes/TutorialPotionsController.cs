@@ -28,12 +28,12 @@ public class TutorialPotionsController : MonoBehaviour {
 	public void makePotion(InventoryController.colourNames colour)
     {
         Instantiate(potion_lookup[colour]);
-        Cat.GetComponent<Animator>().SetTrigger("Match");
+        //Cat.GetComponent<Animator>().SetTrigger("Match");
     }
 
     public void makePotion(Color colour)
     {
-        Cat.GetComponent<Animator>().SetTrigger("Match");
+        //Cat.GetComponent<Animator>().SetTrigger("Match");
         if (colour == Color.red)
         {
             Instantiate(redPotion);
