@@ -38,7 +38,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData) // runs when a card is clicked/tapped
      {
-        if (!Front_Showing && !CardNeedsReset && !CardController.ClickedCardsNeedFlip)
+        if (!Front_Showing && !CardNeedsReset && CardController.clickedCards.Count < 2)
         {
             animator.SetTrigger("Display");
             Front_Showing = true;

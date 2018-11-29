@@ -100,7 +100,7 @@ public class CardGridController : MonoBehaviour {
         else
         {
             throwPotion();
-            clickedCards.Clear();
+            clickedCards.RemoveRange(0, 2);
             pairsMade++;
             return true;
         }
@@ -117,6 +117,8 @@ public class CardGridController : MonoBehaviour {
             throwQueue.Add(Color.blue);
         else if (clickedCards[0].thisMaterial.name == "Herb")
             throwQueue.Add(Color.green);
+
+        CatAnimator.SetBool("Is_Happy", true);
     }
 
     public Material GiveMat() //this function is called by each card when it needs a new texture
@@ -139,10 +141,11 @@ public class CardGridController : MonoBehaviour {
         {
             flipTimer += Time.deltaTime;
             if (flipTimer >= 1.0f)
-            {
-                foreach (CardBehaviour card in clickedCards)
+            {     
+                for(int i = 0; i < 2; i++)
                 {
-                    card.unflip();
+                    clickedCards[0].unflip();
+                    clickedCards.RemoveAt(0);
                 }
                 clickedCards.Clear();
                 ClickedCardsNeedFlip = false;
@@ -152,9 +155,8 @@ public class CardGridController : MonoBehaviour {
 
         if (throwQueue.Count > 0)
         {
-            CatAnimator.SetBool("Is_Happy", true);
             PotionThrowTimer += Time.deltaTime;
-            if (PotionThrowTimer >= 1.0f)
+            if (PotionThrowTimer >= 0.5f)
             {
                 tutorialPotionsController.makePotion(throwQueue[0]);
                 throwQueue.RemoveAt(0);
