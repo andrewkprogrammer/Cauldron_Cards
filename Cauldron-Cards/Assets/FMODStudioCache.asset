@@ -29,7 +29,7 @@ MonoBehaviour:
   - {fileID: 114765650832647302}
   MasterBankRef: {fileID: 114359743700183514}
   StringsBankRef: {fileID: 114109306305033588}
-  stringsBankWriteTime: 636789278845748951
+  stringsBankWriteTime: 636790870078759136
   cacheVersion: 2
 --- !u!114 &114018294820868210
 MonoBehaviour:
@@ -166,6 +166,21 @@ MonoBehaviour:
   Min: 1
   Max: 4
   Default: 1
+--- !u!114 &114050195699483802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Proximity
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114061356855869786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,10 +245,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114471030867886314}
-  - {fileID: 114354339892560486}
-  - {fileID: 114415665497990088}
-  - {fileID: 114567685293817496}
+  - {fileID: 114612056103576784}
+  - {fileID: 114114136254502730}
+  - {fileID: 114461213350588330}
+  - {fileID: 114488841124848202}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
@@ -338,7 +353,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114144932004232360}
+  - {fileID: 114121539430890896}
   MinDistance: 0
   MaxDistance: 0
   Length: 29313
@@ -414,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD Audio\Cauldron Cards FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636789278845748951
+  lastModified: 636790870078759136
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -435,6 +450,36 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114114136254502730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fire
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114121539430890896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 1
+  Max: 4
+  Default: 1
 --- !u!114 &114135012703655852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +559,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114109849485958810}
+  - {fileID: 114896095510681872}
   MinDistance: 0
   MaxDistance: 0
   Length: 1353
@@ -973,7 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\s182378\Documents\Code Repository\Cauldron_Cards\Cauldron-Cards\Assets\FMOD
     Audio\Cauldron Cards FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 636789278845678951
+  lastModified: 636790870078679136
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1245,6 +1290,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114461213350588330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Ice
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114466749444132994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,6 +1347,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Grass
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114488841124848202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Electricity
   Min: 0
   Max: 1
   Default: 0
@@ -1507,6 +1582,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 14696
+--- !u!114 &114612056103576784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Grass
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114638622064431694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,6 +1612,21 @@ MonoBehaviour:
   Min: 1
   Max: 4
   Default: 1
+--- !u!114 &114661623034234174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Forest
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114662073426144230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1784,6 +1889,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114761625202333294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Bubbles
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114765650832647302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,12 +1923,27 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114761310041685984}
-  - {fileID: 114098476024814852}
-  - {fileID: 114135012703655852}
+  - {fileID: 114768028459733496}
+  - {fileID: 114661623034234174}
+  - {fileID: 114761625202333294}
   MinDistance: 0
   MaxDistance: 0
   Length: 64191
+--- !u!114 &114768028459733496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fire
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114773193878927794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2120,6 +2255,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114896095510681872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Detail
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114903960620981522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2299,7 +2449,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114415347191491020}
+  - {fileID: 114050195699483802}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000

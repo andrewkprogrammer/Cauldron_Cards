@@ -138,7 +138,7 @@ public class CardGridController : MonoBehaviour {
         if (ClickedCardsNeedFlip)
         {
             flipTimer += Time.deltaTime;
-            if (flipTimer >= 1.6f)
+            if (flipTimer >= 1.0f)
             {
                 foreach (CardBehaviour card in clickedCards)
                 {
@@ -152,14 +152,21 @@ public class CardGridController : MonoBehaviour {
 
         if (throwQueue.Count > 0)
         {
+            CatAnimator.SetBool("Is_Happy", true);
             PotionThrowTimer += Time.deltaTime;
-            if (PotionThrowTimer >= 1.5f)
+            if (PotionThrowTimer >= 1.0f)
             {
                 tutorialPotionsController.makePotion(throwQueue[0]);
                 throwQueue.RemoveAt(0);
                 PotionThrowTimer = 0.0f;
             }
+
         }
+        else
+        {
+            CatAnimator.SetBool("Is_Happy", false);
+        }
+
 
         if (pairsMade >= 8)
             Reshuffle();
